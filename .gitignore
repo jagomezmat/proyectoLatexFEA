@@ -1,6 +1,6 @@
 # Ignorar archivos locales y de Windows
 *.pdf
-desktop.ini
+*desktop.ini
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
