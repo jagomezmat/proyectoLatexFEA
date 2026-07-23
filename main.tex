@@ -2,6 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[spanish]{babel}
+\usepackage{csquotes}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -16,7 +17,7 @@
 \pgfplotsset{compat=1.18} % Usa una versión reciente, 1.18 es la actual
 \usepackage[hidelinks]{hyperref} % hidelinks quita los recuadros de color
 \usepackage[
-  backend=biber,   % usa el motor Biber
+	backend=bibtex,  % usa BibTeX, compatible con compiladores que no ejecutan Biber
   style=numeric,   % o authoryear, apa, ieee, etc.
   sorting=none     % o ynt, nyt, etc.
 ]{biblatex}
@@ -121,255 +122,39 @@ objetivo general
 \section{Metodología}
 
 La presente investigación se enmarca en un estudio de ..
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=1\linewidth]{IMG_20250616_131840.jpg}
-    \caption{Desarrollo de actividades experimentales y audiovisuales con los estudiantes de grado 11}
-    \label{fig:actividades}
-\end{figure}
 
-\subsection{Contexto y participantes}
-La intervención se llevó a cabo durante un mes, en el marco del calendario académico regular, en una institución educativa pública de Soacha, Cundinamarca. El grupo participante consistió en la totalidad de un curso de grado 11, compuesto por 37 estudiantes (27 de género femenino, 10 de género masculino), con edades comprendidas entre los 15 y 18 años. La participación en las actividades no fue voluntaria, sino que formó parte integral del desarrollo curricular de la asignatura de física, garantizando la inclusión de todo el espectro de estudiantes del curso, independientemente de su nivel de motivación inicial.
+% \begin{figure}[ht]
+%     \centering
+%     \includegraphics[width=1\linewidth]{figura.jpg}
+%     \caption{Desarrollo de}
+%     \label{fig:Figura1}
+% \end{figure}
 
-\subsection{Diseño e implementación de la secuencia didáctica}
-La secuencia didáctica fue diseñada para ser desarrollada en cuatro sesiones semanales de dos horas académicas cada una. El flujo de actividades se organizó cronológicamente para construir los conceptos de manera progresiva, transitando desde lo tangible y fenomenológico hasta lo abstracto y lúdico.
+% \subsection{Contexto y participantes}
+% La intervención se llevó a cabo durante un mes, en el marco del calendario académico regular, en una institución educativa pública de Soacha, Cundinamarca. El grupo participante consistió en la totalidad de un curso de grado 11, compuesto por 37 estudiantes (27 de género femenino, 10 de género masculino), con edades comprendidas entre los 15 y 18 años. La participación en las actividades no fue voluntaria, sino que formó parte integral del desarrollo curricular de la asignatura de física, garantizando la inclusión de todo el espectro de estudiantes del curso, independientemente de su nivel de motivación inicial.
 
-\subsubsection{Fase 1: Diagnóstico y anclaje fenomenológico}
-\paragraph{Pre-test.} En la primera sesión, y antes de cualquier instrucción formal, se aplicó un cuestionario inicial (ver Anexo A) para establecer una línea base sobre los preconceptos de los estudiantes acerca de la mecánica cuántica, sus intuiciones sobre el comportamiento del mundo microscópico y su actitud general hacia la ciencia y las matemáticas.
-
-\paragraph{Introducción a la dualidad onda partícula y polarización de la luz.} La intervención comenzó con la visualización y discusión de un video educativo sobre el experimento de la doble rendija para introducir el concepto de dualidad onda-partícula \cite{videoDobleRendija}. Inmediatamente después, se realizó una práctica de laboratorio tangible: el experimento de los tres polarizadores, utilizando un puntero láser y polarizadores lineales. Esta experiencia sirvió como anclaje fenomenológico para el resto de la secuencia, presentando un resultado experimental contraintuitivo que la física clásica no puede explicar satisfactoriamente. Los comportamientos fenomenológicos del experimento se apoyaron con el uso de las simulaciones virtuales de Quantum Flytrap \cite{VisualizingQuantumMechanics2022} y PhET \cite{PhET}, reforzando visualmente lo aprendido en la experiencia.
-
-\paragraph{Construcción del formalismo básico.} Para modelar los resultados del experimento, se introdujo el concepto del Cubo de Bloch, siguiendo la propuesta de Levy y Singh \cite{TeachingQuantumFormalism2024}. Se asoció la polarización de la luz con los estados en las caras del cubo y la acción de los polarizadores con ``preguntas'' que fuerzan un colapso del estado. A partir de esta analogía visual y manipulable, se presentó la notación de Dirac de manera simplificada, a través del formalismo análogo ``Dot-Vec'', que se basa únicamente en el concepto de producto punto entre vectores para hacerlo accesible a estudiantes con bases matemáticas frágiles \cite{TeachingQuantumFormalism2024}.
+% \subsection{Diseño e implementación de la secuencia didáctica}
+% La secuencia didáctica fue diseñada para ser desarrollada en cuatro sesiones semanales de dos horas académicas cada una. El flujo de actividades se organizó cronológicamente para construir los conceptos de manera progresiva, transitando desde lo tangible y fenomenológico hasta lo abstracto y lúdico.
 
 
-\begin{figure}[h!]
-    \centering
-    % --- Subfigura de la Izquierda (Dos Polarizadores) ---
-    \subfloat[Caso con dos polarizadores cruzados (H y V). En la pantalla no se observa luz.]{
-        \includegraphics[width=0.48\textwidth]{DosPolarizadores.jpg}
-        \label{fig:dos_pol}
-    }
-    \hfill % Este comando crea un espacio horizontal entre las imágenes
-    % --- Subfigura de la Derecha (Tres Polarizadores) ---
-    \subfloat[Al insertar un tercer polarizador a 45º en medio de los dos anteriores, la luz reaparece en la pantalla.]{
-        \includegraphics[width=0.47\textwidth]{TresPolarizadores.jpg}
-        \label{fig:tres_pol}
-    }
-    \caption{Comparación visual del resultado del experimento de polarización. A la izquierda, el resultado esperado con dos polarizadores cruzados. A la derecha, el resultado contraintuitivo al añadir un tercer polarizador.}
-    \label{fig:polarizadores_comparacion}
-\end{figure}
+% \begin{figure}[ht!]
+%     \centering
+%     % --- Subfigura de la Izquierda (Dos Polarizadores) ---
+%     \subfloat[Caso con dos polarizadores cruzados (H y V). En la pantalla no se observa luz.]{
+%         \includegraphics[width=0.48\textwidth]{DosPolarizadores.jpg}
+%         \label{fig:dos_pol}
+%     }
+%     \hfill % Este comando crea un espacio horizontal entre las imágenes
+%     % --- Subfigura de la Derecha (Tres Polarizadores) ---
+%     \subfloat[Al insertar un tercer polarizador a 45º en medio de los dos anteriores, la luz reaparece en la pantalla.]{
+%         \includegraphics[width=0.47\textwidth]{TresPolarizadores.jpg}
+%         \label{fig:tres_pol}
+%     }
+%     \caption{Comparación visual del resultado del experimento de polarización. A la izquierda, el resultado esperado con dos polarizadores cruzados. A la derecha, el resultado contraintuitivo al añadir un tercer polarizador.}
+%     \label{fig:polarizadores_comparacion}
+% \end{figure}
 
 
-
-
-\subsubsection{Fase 2: Exploración interactiva y aplicación lúdica}
-\paragraph{Simulaciones digitales.} Para reforzar la comprensión del comportamiento de los fotones individuales y el proceso de medición, se utilizaron dos simulaciones interactivas. Primero, la simulación del Virtual Lab de Quantum Flytrap sobre la paradoja de los tres polarizadores \cite{QuantumFlytrapPolarizer2022}. Segundo, la simulación sobre medición cuántica de PhET Interactive Simulations \cite{PhET}, que permite explorar el colapso del estado de forma visual. Ambas simulaciones fueron enlazadas en una plataforma local Moodle, para que los estudiantes las pudieran usar directamente desde sus celulares.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.8\linewidth]{IMG_20250618_124215.jpg}
-    \caption{Torneo de TiqTaqToe cuántico}
-    \label{fig:tiqtaqtoe}
-\end{figure}
-
-
-
-\paragraph{Gamificación: Torneo de Quantum TiqTaqToe.} La culminación de la intervención fue un torneo del juego \textit{Quantum TiqTaqToe}, basado en la metodología de aprendizaje a través del juego propuesta por Chiofalo et al. \cite{GamesForTeaching2022}. Los estudiantes compitieron en los niveles que introducen la superposición y el entrelazamiento. El objetivo era que los estudiantes no solo aprendieran las reglas, sino que las aplicaran estratégicamente para ganar, logrando así una comprensión operacional y vivencial de estos conceptos cuánticos.
-
-\subsubsection{Fase 3: Evaluación Post-Intervención}
-Al finalizar la última sesión, se aplicó una encuesta final (post-test), diseñada para medir la evolución en la comprensión conceptual y en la percepción actitudinal de los estudiantes tras la intervención.
-
-\subsection{Instrumentos y análisis de datos}
-La recolección de datos se basó en los siguientes instrumentos:
-\begin{enumerate}
-    \item \textbf{Cuestionarios Pre y Post-Intervención:} Se diseñaron dos cuestionarios. El pre-test constaba de 15 preguntas y el post-test de 20 preguntas, combinando ítems de escala Likert (de 1 a 5), preguntas de opción múltiple y preguntas conceptuales de respuesta cerrada (sí/no/no estoy seguro). El propósito del pre-test fue diagnosticar el punto de partida, mientras que el post-test buscó medir la evolución en la comprensión, la autoeficacia y la motivación.
-    \item \textbf{Observación participante:} Se llevaron notas de campo por parte del docente-investigador durante las sesiones, registrando de manera cualitativa el nivel de participación, el tipo de preguntas formuladas por los estudiantes, las estrategias emergentes durante el torneo y el nivel general de compromiso con las actividades.
-\end{enumerate}
-El análisis de los resultados, que se presenta en las siguientes secciones, se enfoca en triangular la información de estos instrumentos para presentar los resultados de la intervención (Sección 4), analizarlos a la luz de los objetivos (Sección 5) y discutir las potencialidades y limitaciones de la propuesta (Sección 6).
-
-\section{Resultados y desarrollo de los objetivos específicos}
-
-En esta sección se presentan los datos cuantitativos y las observaciones cualitativas recopiladas durante la implementación del proyecto. El propósito es mostrar la evidencia obtenida en relación con cada uno de los objetivos específicos planteados, comenzando por el establecimiento de la línea base del grupo.
-
-\subsection{Línea Base: Diagnóstico del grupo}
-
-Para cumplir con la primera parte del objetivo específico 3, se aplicó un cuestionario de diagnóstico (ver anexo A) antes de iniciar cualquier actividad pedagógica. Los resultados de este pre-test, aplicados a la totalidad del curso (N=37), permitieron establecer una línea base cuantitativa sobre el perfil de los participantes, sus preconceptos en física y su actitud hacia la ciencia. %A continuación, se presentan los datos consolidados.
-
-\begin{table}[h!]
-\centering
-\caption{Perfil actitudinal y demográfico del grupo.}
-\label{tab:pre_perfil}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Pregunta 1: Edad} & \textbf{n} & \textbf{\%} \\
-\hline
-15 años & 4 & 11\% \\
-16-17 años & 29 & 78\% \\
-18 años & 4 & 11\% \\
-\hline
-\textbf{Pregunta 2: Género} & \textbf{n} & \textbf{\%} \\
-\hline
-Femenino & 27 & 73\% \\
-Masculino & 10 & 27\% \\
-\hline
-\hline
-\textbf{Pregunta 3: Interés en materias de ciencia} & \textbf{n} & \textbf{\%} \\
-\hline
-1 (Nada) & 10 & 27\% \\
-2 (Poco) & 16 & 43\% \\
-3 (Neutral) & 9 & 24\% \\
-4 (Algo) & 2 & 5\% \\
-5 (Muy interesado) & 0 & 0\% \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\caption{Autopercepción de habilidades matemáticas.}
-\label{tab:pre_math}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Pregunta 4: ¿Sabe qué es un vector?} & \textbf{n} & \textbf{\%} \\
-\hline
-Sí, lo entiendo bien & 3 & 8\% \\
-Lo he escuchado, pero no lo entiendo bien & 16 & 43\% \\
-No, nunca lo he escuchado & 18 & 49\% \\
-\hline
-\textbf{Pregunta 5: ¿Comodidad con matemáticas?} & \textbf{n} & \textbf{\%} \\
-\hline
-1 (Muy incómodo) & 20 & 54\% \\
-2 (Incómodo) & 10 & 27\% \\
-3 (Neutral) & 6 & 16\% \\
-4 (Cómodo) & 1 & 3\% \\
-5 (Muy cómodo) & 0 & 0\% \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\caption{Preconceptos sobre física y ciencia.}
-\label{tab:pre_physics}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Pregunta 6: Partículas pequeñas vs. grandes} & \textbf{n} & \textbf{\%} \\
-\hline
-Se comportan igual & 22 & 59\% \\
-Se comportan diferente & 5 & 14\% \\
-No estoy seguro/a & 10 & 27\% \\
-\hline
-\textbf{Pregunta 11: ¿Experimentos son predecibles?} & \textbf{n} & \textbf{\%} \\
-\hline
-Sí, siempre / Casi siempre predecibles & 30 & 81\% \\
-A veces / Rara vez / No sé & 7 & 19\% \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\caption{Familiaridad y percepción sobre física cuántica.}
-\label{tab:pre_quantum}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Pregunta 7: ¿Ha escuchado el término?} & \textbf{n} & \textbf{\%} \\
-\hline
-Sí & 25 & 68\% \\
-No & 12 & 32\% \\
-\hline
-\textbf{Pregunta 12: Dificultad percibida del tema} & \textbf{n} & \textbf{\%} \\
-\hline
-1-3 (Nada/Poco/Regularmente difícil) & 3 & 8\% \\
-4 (Bastante difícil) & 12 & 32\% \\
-5 (Extremadamente difícil) & 22 & 59\% \\
-\hline
-\textbf{Pregunta 13: Interés en aprender del tema} & \textbf{n} & \textbf{\%} \\
-\hline
-1 (Nada) & 15 & 40\% \\
-2 (Poco) & 15 & 40\% \\
-3 (Regularmente) & 6 & 16\% \\
-4 (Bastante) & 1 & 3\% \\
-5 (Muy interesado) & 0 & 0\% \\
-\hline
-\end{tabular}
-\end{table}
-
-Los datos presentados en las tablas \ref{tab:pre_perfil} a \ref{tab:pre_quantum} confirman cuantitativamente el diagnóstico inicial del grupo. El perfil de entrada se caracteriza por un bajo interés general en las ciencias (70\% de interés bajo o nulo), una marcada inseguridad en las habilidades matemáticas básicas (81\% se siente incómodo o muy incómodo) y una fuerte adhesión a las intuiciones de la física clásica (59\% cree que el mundo micro y macro se comportan igual, y 81\% cree que los experimentos son predecibles). Adicionalmente, se constata una percepción de la física cuántica como un tema extremadamente difícil (59\%) y de muy bajo interés inicial (80\% de interés poco o nulo). Esta línea base establece el desafiante punto de partida sobre el cual se implementó la intervención pedagógica.
-
-
-\subsection{Observaciones cualitativas durante la implementación}
-
-Además de los datos cuantitativos, se realizó un registro cualitativo a través de la observación participante durante las cuatro sesiones. Estas observaciones son cruciales para interpretar la dinámica del aula y las reacciones de los estudiantes frente a una temática y una metodología novedosas.
-
-El primer hallazgo notable fue la captura del interés inicial del grupo. A pesar de la apatía general registrada en el pre-test, la introducción del tema vinculándolo con aplicaciones tecnológicas actuales como la \textbf{computación cuántica y la inteligencia artificial} generó un cambio visible en la actitud de los estudiantes. Se observó que la visión de una proyección a futuro y la relevancia tecnológica del tema funcionaron como un gancho efectivo para captar su atención.\\
-\vspace{1em}
-Durante el desarrollo de las actividades prácticas, la receptividad se mantuvo alta. Los estudiantes se mostraron atentos y curiosos durante el experimento de los tres polarizadores y manifestaron un interés particular en los resultados contraintuitivos del video del experimento de la doble rendija. La transición hacia herramientas conceptuales como el \textbf{Cubo de Bloch} fue fluida; los estudiantes manipularon el objeto físico, y junto con las simulaciones, lograron conectar la abstracción de un ``estado cuántico'' con el fenómeno tangible de la polarización de la luz. Se constató que, a este nivel, la comprensión de los conceptos básicos fue generalizada, cumpliendo así con el objetivo específico 1.\\
-\vspace{1em}
-El punto culminante de la participación y el compromiso se alcanzó durante el torneo de \textbf{\textit{Quantum TiqTaqToe}}. El ambiente del aula se transformó en uno de competencia lúdica y colaborativa. Se observó que todos los estudiantes participaron activamente, discutiendo estrategias y aplicando de manera natural las reglas de superposición para ganar. Esta gamificación permitió una apropiación operacional de los conceptos, tal como lo sugiere la literatura \cite{GamesForTeaching2022}, cumpliendo con el objetivo específico 2.\\
-\vspace{1em}
-Finalmente, en la última sesión se generó una discusión grupal sobre la relevancia del tema. Los estudiantes reflexionaron sobre la necesidad de una alfabetización cuántica para no ser engañados por el uso indebido del término ``cuántico'' en contextos pseudocientíficos, un fenómeno que reconocieron en medios de comunicación. Varios estudiantes expresaron de manera espontánea un deseo de saber más sobre computación cuántica, y un grupo reducido pero significativo manifestó un nuevo interés por las carreras científicas, indicando un cambio actitudinal positivo.
-
-\subsection{Resultados de la evolución conceptual y actitudinal (Post-Test)}
-
-Para cuantificar el impacto de la intervención, se aplicó el cuestionario post-proyecto al finalizar la última sesión. Los resultados revelan una transformación significativa en la comprensión y la actitud del grupo en comparación con la línea base establecida en el pre-test.
-
-\begin{table}[h!]
-\centering
-\caption{Autopercepción de la comprensión de conceptos cuánticos clave (Post-Test).}
-\label{tab:post_concepts}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Concepto} & \textbf{Regular} & \textbf{Bastante bien} & \textbf{Muy bien} & \textbf{Total Positivo} \\
-\hline
-Estado cuántico & 49\% & 38\% & 5\% & 92\% \\
-Medición cuántica & 51\% & 35\% & 5\% & 91\% \\
-Superposición & 35\% & 51\% & 11\% & 97\% \\
-Entrelazamiento & 38\% & 46\% & 11\% & 95\% \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\caption{Valoración de las herramientas pedagógicas y chequeo conceptual (Post-Test).}
-\label{tab:post_tools}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Pregunta Clave} & \textbf{Respuesta Positiva} & \textbf{\%} \\
-\hline
-¿El Cubo de Bloch ayudó a entender? (Resp. 4 o 5) & 32 de 37 & 86\% \\
-¿El juego hizo los conceptos más tangibles? (Resp. 4 o 5) & 35 de 37 & 95\% \\
-\hline
-\textbf{Chequeo Conceptual} & \textbf{Respuesta Correcta} & \textbf{\%} \\
-\hline
-¿La polarización estaba definida antes de medir? (Resp. ``No'') & 34 de 37 & 92\% \\
-¿Comportamiento en la doble rendija? (Resp. ``Como ondas'') & 36 de 37 & 97\% \\
-\hline
-\end{tabular}
-\end{table}
-
-\begin{table}[h!]
-\centering
-\caption{Evolución de la actitud y motivación hacia la física cuántica (Post-Test).}
-\label{tab:post_attitude}
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Pregunta Clave} & \textbf{n} & \textbf{\%} \\
-\hline
-\textbf{¿Sientes que puedes llegar a comprender el tema?} & & \\
-(Respuestas ``Sí, puedo'' o ``Sí, puedo dominarla'') & 19 & 51\% \\
-\hline
-\textbf{¿Estás más interesado/a en aprender más?} & & \\
-(Respuestas ``De acuerdo'' o ``Totalmente de acuerdo'') & 26 & 70\% \\
-\hline
-\textbf{¿Recomendarías estas actividades?} & & \\
-(Respuestas ``Sí'' o ``Totalmente'') & 37 & 100\% \\
-\hline
-\end{tabular}
-\end{table}
-
-Estos datos muestran resultados satisfactorios de la productividad de la intervención. Se observa una comprensión generalizada de los conceptos (tabla \ref{tab:post_concepts}), una validación casi unánime de las herramientas pedagógicas (tabla \ref{tab:post_tools}) y una drástica mejora en la autoeficacia y el interés de los estudiantes (tabla \ref{tab:post_attitude}). La erradicación de los preconceptos clásicos, evidenciada en los chequeos conceptuales, es particularmente notable.
 
 
 %---------------------------------------------------------------------
@@ -377,234 +162,7 @@ Estos datos muestran resultados satisfactorios de la productividad de la interve
 
 \section{Análisis de resultados}
 
-En esta sección se interpretan los resultados presentados en el apartado anterior, con el propósito de discutir el alcance y significado de los hallazgos a la luz de los objetivos específicos del estudio. El análisis se estructura en tres ejes: el impacto en la comprensión conceptual, la efectividad de las herramientas pedagógicas implementadas y la transformación actitudinal de los estudiantes.
-
-\subsection{El impacto en la comprensión conceptual: De la intuición clásica al razonamiento cuántico}
-
-El primer resultado notable de la intervención es el significativo cambio en la comprensión conceptual de los estudiantes. La comparación entre los datos del pre-test y el post-test revela un claro desplazamiento desde una visión del mundo arraigada en la física clásica hacia una aceptación y comprensión de los postulados cuánticos.
-
-Un indicador clave de este cambio se observa en la pregunta sobre la naturaleza de una propiedad física antes de ser medida. Como se muestra en la figura \ref{fig:medicion_comparativo}, antes de la intervención, la gran mayoría del grupo (59\%) sostenía la visión clásica de que las partículas pequeñas se comportan como las grandes, y un 81\% creía en la predictibilidad de los experimentos. Tras la intervención, los resultados se invirtieron drásticamente.
-
-
-\begin{figure}[h!]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            width=0.8\textwidth,
-            height=9cm,
-            bar width=20pt,
-            enlarge x limits=0.3,
-            legend style={at={(0.5,-0.20)}, anchor=north, legend columns=-1},
-            ylabel={Porcentaje de Estudiantes (\%)},
-            symbolic x coords={Visión Clásica, Visión Cuántica},
-            xtick=data,
-            nodes near coords,
-            nodes near coords align={vertical},
-            ymin=0, ymax=100,
-            ymajorgrids=true,
-            grid style=dashed,
-        ]
-        % Datos del Pre-Test
-        \addplot[fill=red!60] coordinates {
-            (Visión Clásica, 81) 
-            (Visión Cuántica, 19)
-        };
-        % Datos del Post-Test
-        \addplot[fill=blue!60] coordinates {
-            (Visión Clásica, 5) 
-            (Visión Cuántica, 95)
-        };
-        \legend{Pre-Test, Post-Test}
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Comparación de la visión sobre la naturaleza de la realidad física. El pre-test agrupa las respuestas deterministas (``experimentos predecibles'') y el post-test la respuesta clásica sobre la polarización (``ya estaba definida'').}
-    \label{fig:medicion_comparativo}
-\end{figure}
-
-
-
-   
-%     \includegraphics[width=0.8\textwidth]{placeholder_grafico1.png}
-%     \caption{Comparación de respuestas a la pregunta conceptual: ``Antes de medir, ¿la luz ya tenía una polarización definida?''. Se observa una inversión de la intuición clásica (respuesta ``Sí'') hacia la comprensión cuántica (respuesta ``No'').}
-%     \label{fig:medicion_comparativo}
-% \end{figure}
-
-El post-test (figura \ref{fig:medicion_comparativo}) muestra que un 92\% de los estudiantes respondió correctamente que la propiedad no estaba definida antes de la medición. Este cambio no fue meramente memorístico. Como se registró en las observaciones cualitativas, la sorpresa genuina manifestada por los estudiantes durante el experimento de los tres polarizadores —al ver reaparecer la luz— sirvió como un evento discrepante fundamental. Este momento de asombro, que como docente no esperaba que fuera tan impactante para ellos, abrió una fisura en su intuición clásica y preparó el terreno para aceptar una nueva forma de razonamiento, validando la estrategia de usar un anclaje fenomenológico para abordar conceptos abstractos.
-
-\subsection{La efectividad de las herramientas pedagógicas: El rol del juego y las analogías}
-% --- GRÁFICA COMPARATIVA: COMPRENSIÓN DE CONCEPTOS CUÁNTICOS ---
-% Conclusión que genera: Ilustra el drástico cambio desde un rechazo 
-% intuitivo o desconocimiento de los conceptos cuánticos clave, hacia una 
-% sólida comprensión de los mismos tras la intervención.
-
-\begin{figure}[h!]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            width=\textwidth,
-            height=7cm,
-            bar width=15pt,
-            enlarge x limits=0.2,
-            legend style={at={(0.5,-0.25)}, anchor=north, legend columns=-1},
-            ylabel={Porcentaje de Estudiantes (\%)},
-            symbolic x coords={
-                Superposición,
-                Entrelazamiento,
-                Estado cuántico,
-                Efecto de medición
-            },
-            xtick=data,
-            xticklabel style={
-                rotate=15,
-                anchor=east,
-                font=\small
-            },
-            nodes near coords,
-            nodes near coords align={vertical},
-            ymin=0, ymax=105,
-            ymajorgrids=true,
-            grid style=dashed,
-            title={Evolución en la comprensión de conceptos fundamentales},
-        ]
-        % --- Datos del Pre-Test ---
-        % Muestra el porcentaje de estudiantes con una visión errónea o de rechazo.
-        % Superposición: 81% (Imposible/Extraño)
-        % Entrelazamiento: 90% (Imposible/Extraño)
-        % Estado cuántico: 59% (Proxy: Creen que micro y macro se comportan igual)
-        % Efecto de Medición: 49% (Creen que medir no afecta)
-        \addplot[fill=red!60] coordinates {
-            (Superposición, 97) 
-            (Entrelazamiento, 90)
-            (Estado cuántico, 100)
-            (Efecto de medición, 78)
-        };
-        
-        % --- Datos del Post-Test ---
-        % Muestra el porcentaje de estudiantes con alta comprensión (respuestas 4 o 5).
-        % Superposición: 92%
-        % Entrelazamiento: 89%
-        % Estado cuántico: 86%
-        % Efecto de Medición: 84%
-        \addplot[fill=blue!60] coordinates {
-            (Superposición, 97)
-            (Entrelazamiento, 95)
-            (Estado cuántico, 86)
-            (Efecto de medición, 95)
-        };
-        \vspace{1em}
-        \legend{Pre-Test (Visión errónea o desconocida), Post-Test (Alta comprensión)}
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Comparación entre la percepción inicial y la comprensión final de los conceptos cuánticos clave.}
-    \label{fig:conceptos_comparativo}
-\end{figure}
-
-
-El éxito en la asimilación de conceptos se puede atribuir directamente a la combinación de herramientas pedagógicas utilizadas, que abordaron el aprendizaje desde múltiples frentes: lo tangible, lo visual y lo lúdico.
-
-La analogía del \textbf{Cubo de Bloch} demostró ser un puente conceptual eficaz. Más del 86\% de los estudiantes reportó que el cubo les ayudó a visualizar y entender tanto el experimento de polarización como la idea abstracta de la transformación de estados. Esta herramienta, propuesta por Levy y Singh \cite{TeachingQuantumFormalism2024}, permitió manipular una representación física de un estado cuántico, haciendo el formalismo menos intimidante y más accesible.
-
-Por su parte, el \textbf{torneo de \textit{Quantum TiqTaqToe}} fue el catalizador del aprendizaje operacional. Las observaciones en el aula confirmaron un ambiente altamente competitivo y colaborativo, donde los estudiantes compartían y discutían estrategias basadas explícitamente en la superposición y el entrelazamiento. Esto corrobora los hallazgos de Chiofalo et al. \cite{GamesForTeaching2022} sobre cómo la gamificación permite una apropiación operacional de los conceptos. Los estudiantes no solo aprendieron sobre la superposición; la usaron para ganar. Este carácter práctico y no repetitivo fue clave para mantener el alto nivel de compromiso. Las simulaciones de Quantum Flytrap \cite{VisualizingQuantumMechanics2022} y PhET complementaron estas actividades, reforzando visualmente lo aprendido en el laboratorio y en el juego.
-
-
-
-
-\subsection{La transformación actitudinal: De la apatía a la curiosidad}
-
-Quizás el resultado más significativo del estudio, dado el contexto de desinterés inicial, es la drástica transformación en la actitud de los estudiantes. La barrera psicológica de que la física cuántica es extremadamente difícil (percepción del 59\% en el pre-test) se redujo considerablemente. En el post-test, el 81\% de los estudiantes manifestó sentir que ``puede comprender'' el tema con el enfoque adecuado.
-
-Este cambio en la autoeficacia se tradujo en un notable aumento del interés. Como se muestra en la figura \ref{fig:interes_comparativo}, el porcentaje de estudiantes con ``poco o nulo'' interés en aprender más sobre el tema se desplomó del 80\% en el pre-test a solo un 5\% en el post-test.
-
-% --- GRÁFICA 2: CAMBIO EN LA MOTIVACIÓN Y EL INTERÉS ---
-% Conclusión que genera: Evidencia el éxito de la intervención en revertir 
-% la apatía inicial, convirtiéndola en curiosidad y motivación activa.
-\begin{figure}[h!]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            width=\textwidth,
-            height=7cm,
-            bar width=20pt,
-            enlarge x limits=0.25,
-            legend style={at={(0.5,-0.25)}, anchor=north, legend columns=-1},
-            ylabel={Porcentaje de Estudiantes (\%)},
-            symbolic x coords={Interés bajo, Interés medio, Interés alto},
-            xtick=data,
-            nodes near coords,
-            nodes near coords align={vertical},
-            ymin=0, ymax=100,
-            ymajorgrids=true,
-            grid style=dashed,
-            title={Evolución del interés por aprender sobre física cuántica},
-        ]
-        % Datos del Pre-Test (Bajo=1+2, Medio=3, Alto=4+5)
-        \addplot[fill=red!60] coordinates {
-            (Interés bajo, 81) 
-            (Interés medio, 16) 
-            (Interés alto, 3)
-        };
-        % Datos del Post-Test (Bajo=1+2, Medio=3, Alto=4+5)
-        \addplot[fill=blue!60] coordinates {
-            (Interés bajo, 5) 
-            (Interés medio, 24) 
-            (Interés alto, 70)
-        };
-        \legend{Pre-Test, Post-Test}
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Comparación del interés por aprender más sobre física cuántica (Pre vs. Post-Test).}
-    \label{fig:interes_comparativo}
-\end{figure}
-
-
-% --- GRÁFICA 3: CAMBIO EN LA AUTOPERCEPCIÓN (AUTOEFICACIA) ---
-% Conclusión que genera: La metodología no solo enseñó conceptos, sino que 
-% empoderó a los estudiantes, derrumbando la barrera psicológica de la dificultad.
-\begin{figure}[h!]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            ybar,
-            width=0.9\textwidth,
-            height=7cm,
-            bar width=25pt,
-            enlarge x limits=0.3,
-            legend style={at={(0.5,-0.25)}, anchor=north, legend columns=-1},
-            ylabel={Porcentaje de Estudiantes (\%)},
-            symbolic x coords={Percepción de dificultad, Percepción de capacidad},
-            xtick=data,
-            nodes near coords,
-            nodes near coords align={vertical},
-            ymin=0, ymax=100,
-            ymajorgrids=true,
-            grid style=dashed,
-            title={Evolución de la percepción sobre la complejidad del tema},
-        ]
-        % Datos del Pre-Test (Dificultad Alta = 4+5)
-        \addplot[fill=red!60] coordinates {
-            (Percepción de dificultad, 92) 
-            (Percepción de capacidad, 8) % El resto
-        };
-        % Datos del Post-Test (Capacidad Alta = 4+5)
-        \addplot[fill=blue!60] coordinates {
-            (Percepción de dificultad, 19) % El resto
-            (Percepción de capacidad, 81)
-        };
-        \legend{Pre-Test, Post-Test}
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Comparación entre la percepción de dificultad antes del proyecto y la percepción de capacidad para comprender el tema después del mismo.}
-    \label{fig:eficacia_comparativo}
-\end{figure}
-
-
-
-
-La observación cualitativa confirma que este interés fue genuino en la mayoría. La evidencia más fuerte de ello no es solo cuantitativa, sino proyectiva: al finalizar la intervención, un grupo de los estudiantes más comprometidos propuso y comenzó a organizar de manera autónoma una feria de ciencias para socializar estas actividades con otros cursos. Esta iniciativa, nacida de los propios estudiantes, es el indicador más claro de que la metodología no solo transmitió conceptos, sino que logró encender una chispa de curiosidad y motivación duradera. La discusión final sobre la necesidad de una alfabetización cuántica para combatir la desinformación también demostró un nivel de reflexión y compromiso que estaba completamente ausente al inicio del proyecto.
-
+En esta sección se interpretan los resultados presentados en el 
 
 \newpage
 
@@ -616,7 +174,8 @@ La observación cualitativa confirma que este interés fue genuino en la mayorí
 %---------------------------------------------------------------------
 %---------------------------------------------------------------------
 
-
+%Bibliografía
+\nocite{*} % Incluye todas las referencias de referencias.bib, aunque no se citen en el texto.
 \printbibliography
 
 \newpage
