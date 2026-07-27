@@ -1,3 +1,54 @@
 \section{Metodología}
 
 La presente investigación se enmarca en un estudio de ..
+
+
+\subsection{Fotometría digital RGB en cámara oscura}
+
+Con el fin de obtener una caracterización complementaria de la emisión de
+fotoluminiscencia de las muestras sintetizadas, se implementó un montaje
+de fotometría digital RGB en cámara oscura. El montaje consistió en una
+caja de cartón de dimensiones $30 \times 20 \times 12$~cm, cuyo interior
+fue pintado con pintura acrílica negra mate para minimizar reflexiones
+parásitas. Sobre la pared superior se fijó una linterna UV portátil con
+longitud de onda de excitación $\lambda_{\text{exc}} = 365$~nm, cubriendo
+la apertura con papel mantequilla como difusor para homogeneizar el haz
+incidente sobre las muestras.
+
+Las 11 muestras coloidales (Figura~\ref{fig:foto_viales}) se
+distribuyeron dentro de la caja en tres filas horizontales de tubos
+Eppendorf de 1.5~mL, dispuestos de la siguiente manera: fila superior
+(V1 a V4), fila central (V5 a V8) y fila inferior (V9 a V11). La
+adquisición de imágenes se realizó con un teléfono POCO X5 configurado
+en modo manual con los siguientes parámetros: velocidad de obturación
+$S = 1/2$~s, sensibilidad ISO~100, balance de blancos fijo en 5000~K y
+lente ultra gran angular. Estos parámetros se mantuvieron constantes
+durante toda la sesión de captura para garantizar la reproducibilidad
+cuantitativa de los datos.
+
+El procesamiento de las imágenes se llevó a cabo mediante un \textit{script}
+en Python (OpenCV 5.0) que permitió la selección interactiva, por parte del
+operador, del centro del líquido fluorescente de cada vial mediante clics
+de mouse. Alrededor de cada centro seleccionado se definió una región de
+interés (ROI) de tamaño fijo ($22 \times 44$~píxeles), garantizando que
+el muestreo se realizara exclusivamente sobre el volumen líquido, sin
+capturar las paredes del tubo ni el fondo oscuro. Para cada ROI se
+extrajeron los valores promedio de los canales Rojo ($R$), Verde ($G$) y
+Azul ($B$) del espacio de color sRGB. A partir de estos valores se
+calcularon dos magnitudes:
+
+\begin{enumerate}[label=\alph*)]
+    \item La luminancia perceptiva según la recomendación BT.601:
+    \begin{equation}
+        Y = 0{,}299\,R + 0{,}587\,G + 0{,}114\,B
+        \label{eq:luminancia}
+    \end{equation}
+
+    \item La relación verde-azul $G/B$, definida como el cociente entre
+    los valores promedio del canal verde y el canal azul de cada ROI.
+    Esta relación constituye un indicador adimensional del color dominante
+    de la emisión, cuya ventaja fundamental es que resulta invariante
+    frente a variaciones espaciales en la intensidad de la fuente de
+    excitación, al tratarse de un cociente evaluado píxel a píxel dentro
+    de la misma región.
+\end{enumerate}
