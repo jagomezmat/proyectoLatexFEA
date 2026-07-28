@@ -2,6 +2,131 @@
 
 En esta sección se interpretan los resultados presentados en el 
 
+\subsection{Síntesis base y caracterización óptica (Ácido cítrico y urea 1:6 y 1:10)}
+
+La primera etapa del trabajo consistió en evaluar la formación de puntos cuánticos de carbono dopados con nitrógeno utilizando la ruta sintética tradicional del sistema binario de ácido cítrico y urea en relación molar 1:6. El tratamiento térmico por microondas (4 minutos a 770~W) produjo una matriz carbonosa masiva (\textit{bulk}), sólida y de color marrón oscuro, la cual no presentó fluorescencia visible al ser expuesta a radiación ultravioleta ($\lambda = 365$~nm).
+
+Para comprender este comportamiento, se realizó una caracterización óptica en estado sólido mediante espectroscopía de reflectancia difusa (DRS) utilizando esfera de integración (Figura~\ref{fig:drs_polvo}). El espectro de absorbancia aparente muestra una meseta saturada en todo el rango UV-Vis ($200$--$800$~nm) con valores cercanos a $1{,}0$~u.a., comportamiento característico de una matriz sólida masiva. La elevada densidad óptica en la fase sólida confirma la presencia de procesos de auto-absorción y apagamiento inducido por agregación (ACQ), los cuales impiden la detección de fotoluminiscencia en el polvo crudo.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.65\linewidth]{secciones/imagenes/espectro_absorbancia_polvo_profesional.png}
+    \caption{Espectro de absorbancia aparente en estado sólido (DRS) para la muestra 1:6 ($200$--$2500$~nm). Se observa la meseta de absorbancia saturada ($A \approx 1{,}0$) en el rango $200$--$800$~nm, característica de la matriz masiva por efecto ACQ.}
+    \label{fig:drs_polvo}
+\end{figure}
+
+Las micrografías de microscopía electrónica de barrido (SEM), presentadas en la Figura~\ref{fig:sem_masivo_completo}, respaldan la estructura monolítica observada por DRS. El material está constituido por bloques micrométricos irregulares con pliegues y porosidades en su superficie, los cuales son el resultado del escape efervescente de subproductos volátiles como amoníaco ($\text{NH}_3$) y dióxido de carbono ($\text{CO}_2$) durante la ebullición y carbonización.
+
+\begin{figure}[htbp]
+    \centering
+    \subfloat[Vista general a 56$\times$, mostrando la estructura masiva monolítica con bordes afilados.]{
+        \includegraphics[width=0.70\linewidth]{secciones/imagenes/sem_56x.png}
+        \label{fig:sem_56x}
+    }
+    \\ \vspace{1mm}
+    \subfloat[Magnificación a 801$\times$, evidenciando cúmulos irregulares y rugosidad de superficie.]{
+        \includegraphics[width=0.70\linewidth]{secciones/imagenes/sem_801x.png}
+        \label{fig:sem_801x}
+    }
+    \\ \vspace{1mm}
+    \subfloat[Alta magnificación a 5.00~k$\times$, mostrando la matriz densa y porosidades de escape de gases.]{
+        \includegraphics[width=0.70\linewidth]{secciones/imagenes/sem_5kx.png}
+        \label{fig:sem_5kx}
+    }
+    \caption{Caracterización morfológica multiescala por microscopía electrónica de barrido (SEM) para la muestra masiva 1:6 (detectores de electrones secundarios SE y retrodispersados BSE). A) Vista general monolítica, B) Cúmulos de partículas y C) Matriz densa de alta magnificación que justifica el efecto de auto-extinción (ACQ).}
+    \label{fig:sem_masivo_completo}
+\end{figure}
+Por su parte, la cuantificación por espectroscopía de dispersión de energía de rayos X (EDX), detallada en la Tabla~\ref{tab:edx_1_6}, confirmó la incorporación exitosa de nitrógeno en la matriz de carbono, registrando un contenido atómico de $27{,}80\%$ en las zonas lisas y de $31{,}54\%$ en las zonas rugosas de la superficie.
+
+\begin{table}[H]
+\centering
+\caption{Composición elemental por EDX (porcentaje atómico \% at.) para la muestra masiva 1:6 en zonas lisas y rugosas de la superficie.}
+\label{tab:edx_1_6}
+\small
+\begin{tabular}{l c c c}
+\hline
+\textbf{Zona analizada} & \textbf{Carbono ($C$)} & \textbf{Nitrógeno ($N$)} & \textbf{Oxígeno ($O$)} \\
+\hline
+Zona lisa   & 42,96\% & 27,80\% & 29,24\% \\
+Zona rugosa & 40,50\% & 31,54\% & 27,95\% \\
+\hline
+\end{tabular}
+\end{table}
+
+Tras la disolución del sólido en agua desionizada y su purificación mediante filtración con membrana de $0{,}22~\mu$m, la suspensión coloidal resultante recuperó la capacidad de emisión fotoluminiscente. La caracterización por espectroscopía de transmisión UV-Vis (validada mediante blanco de agua desionizada) permitió identificar los centros ópticos moleculares presentes en solución (Figura~\ref{fig:uv_vis_comparacion}):
+
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Pico a 339~nm:} Asociado a la transición electrónica $n \to \pi^*$, la cual evidencia la funcionalización superficial del núcleo de carbono con grupos orgánicos nitrogenados y oxigenados.
+    \item \textbf{Pico a 417~nm:} Correspondiente al centro emisor de la estructura, asociado a dominios conjugados y fluoróforos moleculares tipo ácido citrazínico integrados en la matriz.
+\end{enumerate}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.90\linewidth]{secciones/imagenes/analisis_espectroscopico_1_6_presentacion.png}
+    \caption{Caracterización óptica comparativa de la muestra 1:6: A) Espectro DRS en fase sólida masiva y B) Espectro de transmisión UV-Vis en fase coloidal filtrada, destacando las bandas en $339$~nm ($n \to \pi^*$) y $417$~nm (fluoróforos).}
+    \label{fig:uv_vis_comparacion}
+\end{figure}
+
+Finalmente, al evaluar la relación molar 1:10 (con 8 minutos de reacción), el exceso de urea actuó como agente de confinamiento estérico durante la pirólisis. Esta estabilización superficial limitó el crecimiento descontrolado del núcleo de carbono, reduciendo el empaquetamiento y el acoplamiento no radiativo entre partículas, lo que permitió obtener una suspensión coloidal con emisión azul intensa bajo radiación UV.
+
+%--------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------
+\subsection{Ruta verde sostenible: ácido cítrico y clara de huevo (N,S-CQDs)}
+
+Con el objetivo de transicionar hacia una síntesis sostenible y evaluar el efecto del co-dopado con azufre y nitrógeno, se sustituyó la urea por clara de huevo (ovoalbúmina) como precursor orgánico. La ovoalbúmina aporta nitrógeno y azufre a través de aminoácidos sulfurados como la cisteína y la metionina, lo que modifica la estructura de bandas y los estados de trampa superficiales de los puntos cuánticos de carbono (N,S-CQDs).
+
+\subsubsection{Cinética de pirólisis y ventana óptima (sweet spot a 1:15 min)}
+
+Para identificar la ventana cinética óptima de reacción, se preparó una serie cinético-temporal evaluando siete tiempos de pirólisis: 1:00, 1:15, 1:30, 1:45, 2:00, 2:30 y 3:00~min. Los espectros de absorción UV-Vis en solución coloidal (Figura~\ref{fig:uv_vis_clara}) permitieron identificar una cinética de reacción dividida en tres regímenes distintos:
+
+\begin{enumerate}[label=\alph*)]
+    \item \textbf{Régimen de nucleación (1:00 min):} La muestra exhibe una absorbancia moderada, indicando que la condensación de los precursores y la formación del núcleo de carbono están en etapa inicial.
+    \item \textbf{Ventana óptima o \textit{sweet spot} (1:15 min):} La absorbancia alcanza su máximo valor funcional, destacando un hombro prominente centrado en $285$~nm. Esta banda corresponde a la transición electrónica $n \to \pi^*$ de los estados de superficie nitrogenados y sulfurados.
+    \item \textbf{Régimen de sobre-carbonización ($\ge 1:30$ min):} Superar los 1:15 min provoca una degradación térmica violenta de los fluoróforos superficiales. Entre los 1:15 y 1:30 min se registra una pérdida de absorbancia funcional superior al $74\%$, alcanzando más del $90\%$ de decaimiento en tiempos mayores, producto del crecimiento excesivo de partículas y la formación de agregados no radiativos.
+\end{enumerate}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.85\linewidth]{secciones/imagenes/espectros_absorbacion.png}
+    \caption{Espectros de absorción UV-Vis en solución para la serie cinético-temporal de clara de huevo (1:00 a 3:00~min). Se destaca el máximo de absorbancia en el \textit{sweet spot} a 1:15~min ($285$~nm) y la rápida degradación por sobre-carbonización en tiempos posteriores.}
+    \label{fig:uv_vis_clara}
+\end{figure}
+
+\subsubsection{Determinación del bandgap óptico mediante Tauc Plot}
+
+A partir del espectro de absorción UV-Vis del \textit{sweet spot} (1:15 min) y aplicando el modelo de Tauc en la región de Beer-Lambert no saturada ($310$--$450$~nm), se determinó la brecha de energía óptica ($E_g$) directa del material (Figura~\ref{fig:tauc_clara}).
+
+El ajuste lineal de $(\alpha h\nu)^2$ en función de la energía del fotón ($h\nu$) arrojó una brecha de banda óptica directa de $E_g = 3{,}334$~eV, correspondiente a una longitud de onda de umbral de $\lambda \approx 372$~nm. Este valor de $E_g$ es característico de nanoestructuras de carbono semiconductoras con confinamiento cuántico efectivo y estados de trampa superficiales moderados por la presencia de nitrógeno y azufre.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.80\linewidth]{secciones/imagenes/tauc_plot_1_15.png}
+    \caption{Gráfica de Tauc para la muestra del \textit{sweet spot} (1:15~min). La extrapolación de la región lineal determina un \textit{bandgap} óptico directo de $E_g = 3{,}334$~eV.}
+    \label{fig:tauc_clara}
+\end{figure}
+
+
+Por su parte, la cuantificación por EDX (Tabla~\ref{tab:edx_clara}) confirmó el co-dopado efectivo del material. Además de la matriz de carbono ($66{,}78\%$ at.) y oxígeno ($32{,}76\%$ at.), se detectó una concentración de $0{,}46\%$ atómico de azufre ($S$), confirmando la integración de los heteroátomos provenientes de los aminoácidos de la ovoalbúmina.
+
+\begin{table}[H]
+\centering
+\caption{Composición elemental por EDX (porcentaje atómico \% at.) para la muestra de clara de huevo (2:30~min).}
+\label{tab:edx_clara}
+\small
+\begin{tabular}{l c c c}
+\hline
+\textbf{Elemento} & \textbf{Símbolo} & \textbf{\% Atómico (\% at.)} & \textbf{Función en la estructura} \\
+\hline
+Carbono  & $C$ & 66,78\% & Matriz coloidal de nucleación $sp^2$ \\
+Oxígeno  & $O$ & 32,76\% & Grupos carboxilo e hidroxilo superficiales \\
+Azufre   & $S$ &  0,46\% & Heteroátomo dopante (aminoácidos cisteína/metionina) \\
+\hline
+\end{tabular}
+\end{table}
+
+%--------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------
+
 \subsection{Fotometría digital RGB}
 
 La Figura~\ref{fig:foto_viales} presenta la fotografía de las 11 muestras
@@ -12,7 +137,7 @@ una tonalidad verde-amarilla en las muestras de la ruta ácida (V9--V11),
 lo que constituye una primera evidencia cualitativa del corrimiento espectral
 entre ambas rutas de síntesis.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\linewidth]{secciones/imagenes/fotometria_viales_manual.png}
     \caption{Fotografía de los 11 viales bajo excitación UV
@@ -29,7 +154,7 @@ derivadas se presentan en la Tabla~\ref{tab:fotometria_rgb}. La luminancia
 neta se define como $Y_{\text{neta}} = Y_{\text{muestra}} - Y_{\text{blanco}}$,
 tomando como referencia el Vial~1 ($Y_{\text{blanco}} = 42{,}57$).
 
-\begin{table}[H]
+\begin{table}[htbp]
 \centering
 \caption{Resultados de la fotometría digital RGB para las 11 muestras.
 $R$, $G$ y $B$ corresponden a la intensidad promedio de cada canal en la
@@ -42,13 +167,13 @@ y $G/B$ la relación verde-azul.}
 \textbf{Vial} & \textbf{Muestra} & $R$ & $G$ & $B$ & $Y$ & $Y_{\text{neta}}$ & $G/B$ \\
 \hline
 V1  & Blanco (H$_2$O)           & 10,6 & 26,2 & 210,4 & 42,57 &   0,00 & 0,125 \\
-V2  & Clara 1:00 min            & 11,3 & 33,6 & 213,2 & 47,38 &  +4,81 & 0,157 \\
-\textbf{V3}  & \textbf{Clara 1:15 min}    & \textbf{12,3} & \textbf{37,3} & \textbf{215,1} & \textbf{50,11} & \textbf{+7,54} & \textbf{0,174} \\
-V4  & Clara 1:30 min            & 10,0 & 28,4 & 207,7 & 43,34 &  +0,77 & 0,137 \\
-V5  & Clara 1:45 min            &  9,4 & 32,9 & 209,1 & 45,96 &  +3,39 & 0,157 \\
-V6  & Clara 2:00 min            & 11,8 & 44,8 & 230,4 & 56,08 & +13,51 & 0,194 \\
-V7  & Clara 2:30 min            & 12,3 & 43,0 & 230,7 & 55,21 & +12,64 & 0,186 \\
-V8  & Clara 3:00 min            &  9,7 & 36,4 & 212,4 & 48,49 &  +5,92 & 0,171 \\
+V2  & AC+Clara huevo 1:00 min            & 11,3 & 33,6 & 213,2 & 47,38 &  +4,81 & 0,157 \\
+\textbf{V3}  & \textbf{AC+Clara huevo 1:15 min}    & \textbf{12,3} & \textbf{37,3} & \textbf{215,1} & \textbf{50,11} & \textbf{+7,54} & \textbf{0,174} \\
+V4  & Clara huevo 1:30 min            & 10,0 & 28,4 & 207,7 & 43,34 &  +0,77 & 0,137 \\
+V5  & Clara huevo 1:45 min            &  9,4 & 32,9 & 209,1 & 45,96 &  +3,39 & 0,157 \\
+V6  & Clara huevo 2:00 min            & 11,8 & 44,8 & 230,4 & 56,08 & +13,51 & 0,194 \\
+V7  & Clara huevo 2:30 min            & 12,3 & 43,0 & 230,7 & 55,21 & +12,64 & 0,186 \\
+V8  & Clara huevo 3:00 min            &  9,7 & 36,4 & 212,4 & 48,49 &  +5,92 & 0,171 \\
 V9  & AC + Urea + Vinagre 2:30  &  8,6 & 26,2 &  69,6 & 25,87 & $-$16,70 & 0,376 \\
 V10 & AC + Urea + Vinagre 3:00  & 14,1 & 32,9 &  61,7 & 30,56 & $-$12,01 & 0,534 \\
 V11 & AC + Urea Inicial 2:30    & 20,6 & 59,7 & 133,1 & 56,39 & +13,82 & 0,448 \\
@@ -59,7 +184,7 @@ V11 & AC + Urea Inicial 2:30    & 20,6 & 59,7 & 133,1 & 56,39 & +13,82 & 0,448 \
 La Figura~\ref{fig:grafica_rgb} muestra la evolución de los canales $R$,
 $G$, $B$ y la luminancia total $Y$ en función del número de vial.
 
-\begin{figure}[H]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\linewidth]{secciones/imagenes/grafica_fotometria_manual.png}
     \caption{Intensidad digital por canal ($R$, $G$, $B$) y luminancia
