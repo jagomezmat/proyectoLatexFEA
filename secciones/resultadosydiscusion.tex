@@ -2,146 +2,68 @@
 
 En esta sección se interpretan los resultados presentados en el 
 
-\subsection{Fotometría digital RGB}
+\section{Resultados}
 
-La Figura~\ref{fig:foto_viales} presenta la fotografía de las 11 muestras
-bajo excitación UV ($\lambda = 365$~nm) con las regiones de interés
-seleccionadas manualmente por el operador. A simple vista se distingue una
-emisión predominantemente azul en las muestras de la ruta verde (V1--V8) y
-una tonalidad verde-amarilla en las muestras de la ruta ácida (V9--V11),
-lo que constituye una primera evidencia cualitativa del corrimiento espectral
-entre ambas rutas de síntesis.
+La Figura~\ref{fig:experimental} muestra el patrón experimental. La intensidad aumenta progresivamente desde ángulos bajos, alcanza una envolvente máxima alrededor de \(28^\circ\) y disminuye hacia \(75^\circ\). No aparecen picos agudos de alta intensidad, lo que descarta una fase cristalina mayoritaria bien ordenada dentro del límite de detección del ensayo.
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.85\linewidth]{secciones/imagenes/fotometria_viales_manual.png}
-    \caption{Fotografía de los 11 viales bajo excitación UV
-    ($\lambda = 365$~nm) en cámara oscura. Los recuadros verdes indican
-    las regiones de interés (ROI) de $22 \times 44$~px seleccionadas
-    manualmente sobre el centro del líquido de cada muestra. Fila
-    superior: V1 (blanco) a V4; fila central: V5 a V8; fila inferior:
-    V9 a V11.}
-    \label{fig:foto_viales}
+  \centering
+  \includegraphics[width=0.98\textwidth]{image1.png}
+  \caption{Difractograma experimental de la muestra JAGA-01.}
+  \label{fig:experimental}
 \end{figure}
 
-Los valores cuantitativos de intensidad digital por canal y las magnitudes
-derivadas se presentan en la Tabla~\ref{tab:fotometria_rgb}. La luminancia
-neta se define como $Y_{\text{neta}} = Y_{\text{muestra}} - Y_{\text{blanco}}$,
-tomando como referencia el Vial~1 ($Y_{\text{blanco}} = 42{,}57$).
+La Figura~\ref{fig:ajuste} presenta el ajuste global. El modelo reproduce adecuadamente la forma de la envolvente y permite distinguir una contribución principal cercana a \(27{,}9^\circ\), una contribución de alto ángulo alrededor de \(40{,}8^\circ\) y una componente menor cerca de \(19{,}2^\circ\). La componente de baja angulación debe considerarse con cautela porque puede representar una transición del fondo, material orgánico residual o una contribución real débil.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.98\textwidth]{image2.png}
+  \caption{Ajuste Pseudo-Voigt y fondo modelado.}
+  \label{fig:ajuste}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.98\textwidth]{image3.png}
+  \caption{Componentes matemáticas obtenidas después de descontar el fondo.}
+  \label{fig:componentes}
+\end{figure}
+
+\subsection{Parámetros obtenidos}
 
 \begin{table}[H]
-\centering
-\caption{Resultados de la fotometría digital RGB para las 11 muestras.
-$R$, $G$ y $B$ corresponden a la intensidad promedio de cada canal en la
-ROI (escala 0--255). $Y$ es la luminancia perceptiva (Ec.~\ref{eq:luminancia})
-y $G/B$ la relación verde-azul.}
-\label{tab:fotometria_rgb}
-\small
-\begin{tabular}{c l c c c c c c}
-\hline
-\textbf{Vial} & \textbf{Muestra} & $R$ & $G$ & $B$ & $Y$ & $Y_{\text{neta}}$ & $G/B$ \\
-\hline
-V1  & Blanco (H$_2$O)           & 10,6 & 26,2 & 210,4 & 42,57 &   0,00 & 0,125 \\
-V2  & Clara 1:00 min            & 11,3 & 33,6 & 213,2 & 47,38 &  +4,81 & 0,157 \\
-\textbf{V3}  & \textbf{Clara 1:15 min}    & \textbf{12,3} & \textbf{37,3} & \textbf{215,1} & \textbf{50,11} & \textbf{+7,54} & \textbf{0,174} \\
-V4  & Clara 1:30 min            & 10,0 & 28,4 & 207,7 & 43,34 &  +0,77 & 0,137 \\
-V5  & Clara 1:45 min            &  9,4 & 32,9 & 209,1 & 45,96 &  +3,39 & 0,157 \\
-V6  & Clara 2:00 min            & 11,8 & 44,8 & 230,4 & 56,08 & +13,51 & 0,194 \\
-V7  & Clara 2:30 min            & 12,3 & 43,0 & 230,7 & 55,21 & +12,64 & 0,186 \\
-V8  & Clara 3:00 min            &  9,7 & 36,4 & 212,4 & 48,49 &  +5,92 & 0,171 \\
-V9  & AC + Urea + Vinagre 2:30  &  8,6 & 26,2 &  69,6 & 25,87 & $-$16,70 & 0,376 \\
-V10 & AC + Urea + Vinagre 3:00  & 14,1 & 32,9 &  61,7 & 30,56 & $-$12,01 & 0,534 \\
-V11 & AC + Urea Inicial 2:30    & 20,6 & 59,7 & 133,1 & 56,39 & +13,82 & 0,448 \\
-\hline
-\end{tabular}
+  \centering
+  \caption{Parámetros derivados del ajuste Pseudo-Voigt.}
+  \label{tab:parametros}
+  \small
+  \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X c c c c}
+    \toprule
+    \textbf{Componente} & \(\boldsymbol{2\theta}\) \textbf{(\(^\circ\))} & \textbf{FWHM (\(^\circ\))} & \(\boldsymbol{d}\) \textbf{(nm)} & \(\boldsymbol{D}\) \textbf{aparente (nm)} \\
+    \midrule
+    Baja angulación & 19,20 & 3,24 & 0,462 & 2,49 \\
+    Halo principal & 27,89 & 12,88 & 0,320 & 0,64 \\
+    Alto ángulo & 40,75 & 14,39 & 0,221 & 0,59 \\
+    \bottomrule
+  \end{tabularx}
 \end{table}
 
-La Figura~\ref{fig:grafica_rgb} muestra la evolución de los canales $R$,
-$G$, $B$ y la luminancia total $Y$ en función del número de vial.
+\noindent\textit{Nota:} \(D\) se calculó con \(K=0{,}9\) y \(\lambda=0{,}15406\ \mathrm{nm}\), sin corrección instrumental. Para las dos bandas más anchas debe reportarse como tamaño de dominio coherente aparente, no como tamaño de partícula.
+
+\subsection{Ejemplo de cálculo para el halo principal}
+
+Para \(2\theta=27{,}89^\circ\), se tiene \(\theta=13{,}94^\circ\). Aplicando la ecuación de Bragg con \(n=1\):
+\begin{equation}
+  d=\frac{\lambda}{2\sin\theta}=0{,}320\ \mathrm{nm}.
+\end{equation}
+El FWHM es \(12{,}88^\circ=0{,}2248\ \mathrm{rad}\). Con \(K=0{,}9\), la ecuación de Scherrer resulta:
+\begin{equation}
+  D=\frac{K\lambda}{\beta\cos\theta}=0{,}64\ \mathrm{nm}.
+\end{equation}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.95\linewidth]{secciones/imagenes/grafica_fotometria_manual.png}
-    \caption{Intensidad digital por canal ($R$, $G$, $B$) y luminancia
-    total ($Y$) para cada una de las 11 muestras, obtenidas a partir de
-    las ROI seleccionadas manualmente. Se observa la caída abrupta del
-    canal azul y el aumento relativo del canal verde en las muestras V9,
-    V10 y V11 (ruta ácida), reflejando el corrimiento espectral de la
-    emisión.}
-    \label{fig:grafica_rgb}
+  \centering
+  \includegraphics[width=0.98\textwidth]{image4.png}
+  \caption{Distribución de residuos del ajuste.}
+  \label{fig:residuos}
 \end{figure}
 
-
-\subsubsection{Confirmación del \textit{sweet spot} cinético}
-
-Dado que los viales V1 a V4 se encuentran en la misma fila horizontal y,
-por tanto, reciben la misma irradiancia UV, sus luminancias absolutas son
-directamente comparables sin necesidad de corrección por gradiente. Dentro
-de esta fila, la luminancia neta alcanza su valor máximo en el Vial~3
-($Y_{\text{neta}} = +7{,}54$), correspondiente a la muestra de 1:15~min
-de pirólisis. El Vial~2 (1:00~min) registra una luminancia menor
-($Y_{\text{neta}} = +4{,}81$), indicando que la nucleación de los CQDs
-aún no ha alcanzado su régimen óptimo. Por su parte, el Vial~4 (1:30~min)
-exhibe un descenso abrupto a $Y_{\text{neta}} = +0{,}77$, lo que
-representa una caída del 90\% en apenas 15~s adicionales de reacción,
-consistente con un proceso de sobre-carbonización que conduce a la
-formación de hollín no fluorescente. Este comportamiento reproduce, de
-manera independiente y por una técnica distinta, el máximo cinético
-observado por espectroscopía UV-Vis en la banda de absorción a 285~nm.
-
-
-\subsubsection{Corrimiento espectral: relación \texorpdfstring{$G/B$}{G/B} como indicador invariante}
-
-La relación $G/B$ permite comparar el color de emisión entre muestras de
-diferentes filas, dado que al tratarse de un cociente entre canales del
-mismo píxel, resulta independiente de la intensidad absoluta de excitación.
-Los resultados revelan tres poblaciones espectrales claramente
-diferenciadas:
-
-\begin{itemize}
-    \item \textbf{Blanco (V1):} $G/B = 0{,}125$, correspondiente
-    exclusivamente a la dispersión Rayleigh de la radiación UV por el
-    solvente y las paredes del tubo.
-
-    \item \textbf{Ruta verde --- Clara de huevo (V2--V8):}
-    $G/B = 0{,}168 \pm 0{,}020$, indicando una emisión dominada por el
-    canal azul ($\lambda_{\text{em}} \approx 420$--$450$~nm), consistente
-    con el pico de absorción a 285~nm y la transición $n \to \pi^*$ de
-    los estados de superficie nitrogenados.
-
-    \item \textbf{Ruta ácida --- Vinagre y Urea (V9--V11):}
-    $G/B = 0{,}453 \pm 0{,}079$, reflejando un desplazamiento
-    significativo de la emisión hacia el verde-amarillo
-    ($\lambda_{\text{em}} \approx 500$--$550$~nm).
-\end{itemize}
-
-El incremento del 170\% en la relación $G/B$ al pasar de la ruta verde
-a la ruta ácida constituye una confirmación cuantitativa e independiente
-del corrimiento batocrómico observado en los espectros UV-Vis, donde el
-pico de absorción se desplaza de 285~nm a 342~nm. Este desplazamiento
-hacia el rojo, tanto en absorción como en emisión, se atribuye al aumento
-del tamaño del dominio $sp^2$ conjugado y a la modificación de los estados
-de trampa superficiales inducida por el medio ácido durante la pirólisis.
-
-Adicionalmente, se observa que el Vial~11 (ruta base con ácido cítrico y
-urea, sin vinagre) presenta una luminancia de $Y = 56{,}39$, notablemente
-superior a la de los Viales~9 y 10 ($Y = 25{,}87$ y $30{,}56$,
-respectivamente), a pesar de compartir la misma fila y, por tanto, la
-misma irradiancia de excitación. Este resultado sugiere que la adición de
-vinagre como co-solvente ácido favorece el crecimiento de los CQDs hacia
-tamaños mayores con menor rendimiento cuántico de fluorescencia, mientras
-que la ruta base (sin vinagre) produce puntos cuánticos de menor tamaño
-con mayor eficiencia emisiva.
-
-\subsubsection{Limitaciones del método}
-
-Es pertinente señalar que la fotometría digital RGB, al basarse en un
-sensor de imagen con tres bandas espectrales anchas (FWHM $\approx$
-80--100~nm por canal), no posee la resolución espectral de un
-espectrómetro UV-Vis convencional (resolución típica de 1~nm). Por este
-motivo, los valores de $G/B$ deben interpretarse como indicadores
-semicuantitativos del color dominante de la emisión, y no como mediciones
-absolutas de la longitud de onda de emisión. No obstante, la consistencia
-observada entre los resultados de ambas técnicas valida el uso de la
-fotometría en cámara oscura como herramienta de bajo costo para la
-verificación rápida de las propiedades ópticas de los CQDs.
