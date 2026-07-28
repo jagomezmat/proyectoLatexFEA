@@ -13,50 +13,87 @@ Posteriormente, se tomaron alícuotas iguales de la solución madre y se sometie
 
 \subsection{Fotometría digital RGB en cámara oscura}
 
-Con el fin de obtener una caracterización complementaria de la emisión de
-fotoluminiscencia de las muestras sintetizadas, se implementó un montaje
-de fotometría digital RGB en cámara oscura. El montaje consistió en una
-caja de cartón de dimensiones $30 \times 20 \times 12$~cm, cuyo interior
-fue pintado con pintura acrílica negra mate para minimizar reflexiones
-parásitas. Sobre la pared superior se fijó una linterna UV portátil con
-longitud de onda de excitación $\lambda_{\text{exc}} = 365$~nm, cubriendo
-la apertura con papel mantequilla como difusor para homogeneizar el haz
-incidente sobre las muestras.
+Con el fin de obtener una caracterización complementaria de la emisión de fotoluminiscencia de las muestras 
+sintetizadas, se implementó un montaje metrológico de fotometría digital RGB en cámara oscura. El montaje consistió en una caja de dimensiones aproximadas $30 \times 20 \times 12$~cm, cuyo interior fue recubierto con pintura acrílica negra mate para minimizar reflexiones parásitas. Sobre la pared superior se fijó una linterna portátil de luz ultravioleta ($\lambda_{\text{exc}} = 365$~nm), acondicionada con una lámina difusora de papel mantequilla para homogeneizar la irradiancia incidente sobre el plano de muestra.
 
-Las 11 muestras coloidales (Figura~\ref{fig:foto_viales}) se
-distribuyeron dentro de la caja en tres filas horizontales de tubos
-Eppendorf de 1.5~mL, dispuestos de la siguiente manera: fila superior
-(V1 a V4), fila central (V5 a V8) y fila inferior (V9 a V11). La
-adquisición de imágenes se realizó con un teléfono POCO X5 configurado
-en modo manual con los siguientes parámetros: velocidad de obturación
-$S = 1/2$~s, sensibilidad ISO~100, balance de blancos fijo en 5000~K y
-lente ultra gran angular. Estos parámetros se mantuvieron constantes
-durante toda la sesión de captura para garantizar la reproducibilidad
-cuantitativa de los datos.
+Las 11 muestras coloidales en viales de 1,5~mL se dispusieron en tres filas horizontales: fila superior (V1 a V4), fila central (V5 a V8) y fila inferior (V9 a V11). La adquisición digital se realizó mediante la cámara de un teléfono inteligente (POCO X5) configurado en modo manual con parámetros fijos: velocidad de obturación $S = 1/2$~s, sensibilidad ISO~100, balance de blancos en 5000~K y lente ultra gran angular. La fijación estricta de estos parámetros garantiza la linealidad de la respuesta fotónica del sensor y previene ajustes automáticos de ganancia.
 
-El procesamiento de las imágenes se llevó a cabo mediante un \textit{script}
-en Python (OpenCV 5.0) que permitió la selección interactiva, por parte del
-operador, del centro del líquido fluorescente de cada vial mediante clics
-de mouse. Alrededor de cada centro seleccionado se definió una región de
-interés (ROI) de tamaño fijo ($22 \times 44$~píxeles), garantizando que
-el muestreo se realizara exclusivamente sobre el volumen líquido, sin
-capturar las paredes del tubo ni el fondo oscuro. Para cada ROI se
-extrajeron los valores promedio de los canales Rojo ($R$), Verde ($G$) y
-Azul ($B$) del espacio de color sRGB. A partir de estos valores se
-calcularon dos magnitudes:
+El procesamiento digital de las imágenes se desarrolló mediante un algoritmo interactivo en Python (OpenCV 5.0). Para cada vial, el operador seleccionó manualmente el centro del volumen líquido, alrededor del cual el código definió una región de interés (ROI) de dimensión fija de $22 \times 44$~píxeles ($N = 968$~px). Para cada ROI se extrajo la intensidad promedio espacial de cada canal de color del espacio sRGB de 8 bits:
+\begin{equation}
+    \bar{R} = \frac{1}{N}\sum_{(i,j)\in\text{ROI}} R(i,j), \quad 
+    \bar{G} = \frac{1}{N}\sum_{(i,j)\in\text{ROI}} G(i,j), \quad 
+    \bar{B} = \frac{1}{N}\sum_{(i,j)\in\text{ROI}} B(i,j)
+\end{equation}
+
+A partir de estos valores promedio por canal se calcularon tres magnitudes analíticas fundamentales:
 
 \begin{enumerate}[label=\alph*)]
-    \item La luminancia perceptiva según la recomendación BT.601:
+    \item \textbf{Luminancia perceptiva ($Y$):} Calculada según la recomendación internacional ITU-R BT.601 \cite{poynton2012digital}:
     \begin{equation}
-        Y = 0{,}299\,R + 0{,}587\,G + 0{,}114\,B
+        Y = 0{,}299\,\bar{R} + 0{,}587\,\bar{G} + 0{,}114\,\bar{B}
         \label{eq:luminancia}
     \end{equation}
+    donde los coeficientes ponderan la sensibilidad espectral del ojo humano (función de eficiencia luminosa fotópica $V(\lambda)$), asignando la mayor sensibilidad al canal verde ($58{,}7\%$).
 
-    \item La relación verde-azul $G/B$, definida como el cociente entre
-    los valores promedio del canal verde y el canal azul de cada ROI.
-    Esta relación constituye un indicador adimensional del color dominante
-    de la emisión, cuya ventaja fundamental es que resulta invariante
-    frente a variaciones espaciales en la intensidad de la fuente de
-    excitación, al tratarse de un cociente evaluado píxel a píxel dentro
-    de la misma región.
+    \item \textbf{Luminancia neta de emisión ($Y_{\text{neta}}$):} Para sustraer la dispersión de fondo provocada por el agua y la cubierta plástica del vial, se definió la luminancia neta como:
+    \begin{equation}
+        Y_{\text{neta}} = Y_{\text{muestra}} - Y_{\text{blanco}}
+        \label{eq:luminancia_neta}
+    \end{equation}
+    donde $Y_{\text{blanco}}$ corresponde a la luminancia medida en el Vial~1 ($H_2\text{O}$ desionizada pura, $Y_{\text{blanco}} = 42{,}57$).
+
+    \item \textbf{Análisis ratiométrico verde-azul ($G/B$):} Basado en los principios de la fluorometría ratiométrica sRGB reportada en la literatura analítica, se definió la relación adimensional:
+    \begin{equation}
+        \text{Ratio } G/B = \frac{\bar{G}_{\text{ROI}}}{\bar{B}_{\text{ROI}}}
+        \label{eq:ratio_gb}
+    \end{equation}
+    Esta relación resulta fundamental puesto que cancela analíticamente cualquier variación espacial en la intensidad de excitación de la lámpara UV. Dado que los filtros de las cámaras de teléfonos inteligentes registran las bandas de emisión en el azul ($\sim 460$~nm) y verde ($\sim 530$~nm), el cociente $G/B$ actúa como un parámetro ratiométrico independiente de la distancia y de la irradiancia, respondiendo exclusivamente a los desplazamientos en la longitud de onda de emisión fotoluminiscente.
 \end{enumerate}
+
+% Con el fin de obtener una caracterización complementaria de la emisión de
+% fotoluminiscencia de las muestras sintetizadas, se implementó un montaje
+% de fotometría digital RGB en cámara oscura. El montaje consistió en una
+% caja de cartón de dimensiones $30 \times 20 \times 12$~cm, cuyo interior
+% fue pintado con pintura acrílica negra mate para minimizar reflexiones
+% parásitas. Sobre la pared superior se fijó una linterna UV portátil con
+% longitud de onda de excitación $\lambda_{\text{exc}} = 365$~nm, cubriendo
+% la apertura con papel mantequilla como difusor para homogeneizar el haz
+% incidente sobre las muestras.
+
+% Las 11 muestras coloidales (Figura~\ref{fig:foto_viales}) se
+% distribuyeron dentro de la caja en tres filas horizontales de tubos
+% Eppendorf de 1.5~mL, dispuestos de la siguiente manera: fila superior
+% (V1 a V4), fila central (V5 a V8) y fila inferior (V9 a V11). La
+% adquisición de imágenes se realizó con un teléfono POCO X5 configurado
+% en modo manual con los siguientes parámetros: velocidad de obturación
+% $S = 1/2$~s, sensibilidad ISO~100, balance de blancos fijo en 5000~K y
+% lente ultra gran angular. Estos parámetros se mantuvieron constantes
+% durante toda la sesión de captura para garantizar la reproducibilidad
+% cuantitativa de los datos.
+
+% El procesamiento de las imágenes se llevó a cabo mediante un \textit{script}
+% en Python (OpenCV 5.0) que permitió la selección interactiva, por parte del
+% operador, del centro del líquido fluorescente de cada vial mediante clics
+% de mouse. Alrededor de cada centro seleccionado se definió una región de
+% interés (ROI) de tamaño fijo ($22 \times 44$~píxeles), garantizando que
+% el muestreo se realizara exclusivamente sobre el volumen líquido, sin
+% capturar las paredes del tubo ni el fondo oscuro. Para cada ROI se
+% extrajeron los valores promedio de los canales Rojo ($R$), Verde ($G$) y
+% Azul ($B$) del espacio de color sRGB. A partir de estos valores se
+% calcularon dos magnitudes:
+
+% \begin{enumerate}[label=\alph*)]
+%     \item La luminancia perceptiva según la recomendación BT.601:
+%     \begin{equation}
+%         Y = 0{,}299\,R + 0{,}587\,G + 0{,}114\,B
+%         \label{eq:luminancia}
+%     \end{equation}
+
+%     \item La relación verde-azul $G/B$, definida como el cociente entre
+%     los valores promedio del canal verde y el canal azul de cada ROI.
+%     Esta relación constituye un indicador adimensional del color dominante
+%     de la emisión, cuya ventaja fundamental es que resulta invariante
+%     frente a variaciones espaciales en la intensidad de la fuente de
+%     excitación, al tratarse de un cociente evaluado píxel a píxel dentro
+%     de la misma región.
+% \end{enumerate}
