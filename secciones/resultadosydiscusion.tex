@@ -1,6 +1,6 @@
 \section{Análisis de resultados}
 
-En esta sección se interpretan los resultados presentados en el 
+En esta sección se presentan y discuten los resultados de la caracterización óptica, morfológica y elemental de las tres rutas sintéticas evaluadas, integrando el análisis de espectroscopía UV-Vis, espectroscopía de reflectancia difusa (DRS), microscopía SEM, microanálisis EDX y la validación metrológica por fotometría digital RGB.
 
 \subsection{Síntesis base y caracterización óptica (Ácido cítrico y urea 1:6 y 1:10)}
 
@@ -8,7 +8,7 @@ La primera etapa del trabajo consistió en evaluar la formación de puntos cuán
 
 Para comprender este comportamiento, se realizó una caracterización óptica en estado sólido mediante espectroscopía de reflectancia difusa (DRS) utilizando esfera de integración (Figura~\ref{fig:drs_polvo}). El espectro de absorbancia aparente muestra una meseta saturada en todo el rango UV-Vis ($200$--$800$~nm) con valores cercanos a $1{,}0$~u.a., comportamiento característico de una matriz sólida masiva. La elevada densidad óptica en la fase sólida confirma la presencia de procesos de auto-absorción y apagamiento inducido por agregación (ACQ), los cuales impiden la detección de fotoluminiscencia en el polvo crudo.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.65\linewidth]{secciones/imagenes/espectro_absorbancia_polvo_profesional.png}
     \caption{Espectro de absorbancia aparente en estado sólido (DRS) para la muestra 1:6 ($200$--$2500$~nm). Se observa la meseta de absorbancia saturada ($A \approx 1{,}0$) en el rango $200$--$800$~nm, característica de la matriz masiva por efecto ACQ.}
@@ -19,21 +19,21 @@ Las micrografías de microscopía electrónica de barrido (SEM), presentadas en 
 
 \begin{figure}[htbp]
     \centering
-    \subfloat[Vista general a 56$\times$, mostrando la estructura masiva monolítica con bordes afilados.]{
+    \subfloat[Vista general a 56$\times$.]{
         \includegraphics[width=0.70\linewidth]{secciones/imagenes/sem_56x.png}
         \label{fig:sem_56x}
     }
     \\ \vspace{1mm}
-    \subfloat[Magnificación a 801$\times$, evidenciando cúmulos irregulares y rugosidad de superficie.]{
+    \subfloat[Magnificaci{\'o}n a 801$\times$.]{
         \includegraphics[width=0.70\linewidth]{secciones/imagenes/sem_801x.png}
         \label{fig:sem_801x}
     }
     \\ \vspace{1mm}
-    \subfloat[Alta magnificación a 5.00~k$\times$, mostrando la matriz densa y porosidades de escape de gases.]{
+    \subfloat[Alta magnificaci{\'o}n a 5.00~k$\times$.]{
         \includegraphics[width=0.70\linewidth]{secciones/imagenes/sem_5kx.png}
         \label{fig:sem_5kx}
     }
-    \caption{Caracterización morfológica multiescala por microscopía electrónica de barrido (SEM) para la muestra masiva 1:6 (detectores de electrones secundarios SE y retrodispersados BSE). A) Vista general monolítica, B) Cúmulos de partículas y C) Matriz densa de alta magnificación que justifica el efecto de auto-extinción (ACQ).}
+    \caption{Caracterización morfológica multiescala por microscopía electrónica de barrido (SEM) para la muestra masiva 1:6 (detectores de electrones secundarios SE y retrodispersados BSE). A) Vista general monolítica a 56$\times$, B) Cúmulos de partículas a 801$\times$ y C) Matriz densa a 5.00~k$\times$ que justifica el efecto de auto-extinción (ACQ).}
     \label{fig:sem_masivo_completo}
 \end{figure}
 Por su parte, la cuantificación por espectroscopía de dispersión de energía de rayos X (EDX), detallada en la Tabla~\ref{tab:edx_1_6}, confirmó la incorporación exitosa de nitrógeno en la matriz de carbono, registrando un contenido atómico de $27{,}80\%$ en las zonas lisas y de $31{,}54\%$ en las zonas rugosas de la superficie.
@@ -60,9 +60,11 @@ Tras la disolución del sólido en agua desionizada y su purificación mediante 
     \item \textbf{Pico a 417~nm:} Correspondiente al centro emisor de la estructura, asociado a dominios conjugados y fluoróforos moleculares tipo ácido citrazínico integrados en la matriz.
 \end{enumerate}
 
-\begin{figure}[htbp]
+Este comportamiento concuerda con lo reportado por Kasprzyk et al. \cite{kasprzyk2021rich} y Ren et al. \cite{ren2021citric}, quienes demostraron que la condensación térmica de ácido cítrico con fuentes amino genera fluoróforos moleculares periféricos asociados a transiciones de superficie $n \to \pi^*$, los cuales dominan la emisión en fase coloidal diluida frente al apagamiento por agregación (ACQ) de la matriz sólida masiva.
+
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.90\linewidth]{secciones/imagenes/analisis_espectroscopico_1_6_presentacion.png}
+    \includegraphics[width=1\linewidth]{secciones/imagenes/analisis_espectroscopico_1_6_presentacion.png}
     \caption{Caracterización óptica comparativa de la muestra 1:6: A) Espectro DRS en fase sólida masiva y B) Espectro de transmisión UV-Vis en fase coloidal filtrada, destacando las bandas en $339$~nm ($n \to \pi^*$) y $417$~nm (fluoróforos).}
     \label{fig:uv_vis_comparacion}
 \end{figure}
@@ -101,13 +103,19 @@ El ajuste lineal de $(\alpha h\nu)^2$ en función de la energía del fotón ($h\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.80\linewidth]{secciones/imagenes/tauc_plot_1_15.png}
-    \caption{Gráfica de Tauc para la muestra del \textit{sweet spot} (1:15~min). La extrapolación de la región lineal determina un \textit{bandgap} óptico directo de $E_g = 3{,}334$~eV.}
+    \caption{Gráfica de Tauc para la muestra del \textit{sweet spot} (1:15~min). La extrapolación de la región lineal determina un \textit{bandgap} óptico directo de $E_g = 3{,}33$~eV.}
     \label{fig:tauc_clara}
 \end{figure}
 
 
 Por su parte, la cuantificación por EDX (Tabla~\ref{tab:edx_clara}) confirmó el co-dopado efectivo del material. Además de la matriz de carbono ($66{,}78\%$ at.) y oxígeno ($32{,}76\%$ at.), se detectó una concentración de $0{,}46\%$ atómico de azufre ($S$), confirmando la integración de los heteroátomos provenientes de los aminoácidos de la ovoalbúmina.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{secciones/imagenes/espectro_edx_clara.png}
+    \caption{Espectro EDX de rayos X característicos para la muestra de Clara de huevo con Ácido Cítrico, evidenciando el pico distintivo de azufre ($S\,K\alpha = 2{,}307$~keV).}
+    \label{fig:edx_clara_individual}
+\end{figure}
 \begin{table}[H]
 \centering
 \caption{Composición elemental por EDX (porcentaje atómico \% at.) para la muestra de clara de huevo (2:30~min).}
@@ -123,6 +131,61 @@ Azufre   & $S$ &  0,46\% & Heteroátomo dopante (aminoácidos cisteína/metionin
 \hline
 \end{tabular}
 \end{table}
+La incorporación de azufre $(0,46 \% at.)$, procedente de los aminoácidos sulfurados de la albúmina, introduce estados de defecto electrónicos y niveles de trampa adicionales en la brecha de banda que mejoran la eficiencia de fotoluminiscencia y modifican los bordes de absorción, de acuerdo con los hallazgos de Kolanowska et al. \cite{kolanowska2022carbon} para CQDs derivados de aminoácidos.
+
+%--------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------
+\subsection{Ruta de catálisis ácida: ácido cítrico, urea y vinagre}
+
+Para evaluar el efecto del medio ácido en la estructura y en las propiedades ópticas de los puntos cuánticos, se realizó la reacción combinando ácido cítrico y urea en presencia de vinagre comercial (ácido acético) como medio de reacción. Tras el tratamiento térmico a 2:30 y 3:00~minutos de pirólisis, el producto sólido obtenido se raspó y se redisolvió en agua desionizada para su posterior caracterización.
+
+El espectro de absorción UV-Vis para la muestra de 2:30~minutos (Figura~\ref{fig:uv_vis_vinagre}) reveló un pico resuelto centrado en $342{,}0$~nm con una absorbancia de $2{,}20$~u.a. Al comparar este resultado con la ruta verde de clara de huevo (cuyo pico principal se ubicó en $285$~nm), se confirma un desplazamiento de la banda de absorción de $57$~nm hacia longitudes de onda más largas. Este cambio evidencia un corrimiento al rojo (corrimiento batocrómico), provocado por la modificación de los estados de trampa superficiales y el aumento de la conjugación de los dominios $sp^2$ bajo la influencia del medio ácido durante la pirólisis.
+
+La modulación de la respuesta óptica por adición de ácido acético se fundamenta en la protonación reversible de los grupos amina $(-NH_2)$ y carboxilo $(-COOH)$ periféricos, lo que altera la distribución de carga en la superficie y provoca una redistribución de los estados de energía HOMO-LUMO. Este fenómeno de corrimiento espectral hacia longitudes de onda mayores en medio ácido coincide con las observaciones de Prado et al. \cite{prado2023improving} y Chen et al. \cite{chen2024eco}
+
+Para la muestra de 3:00~minutos, el pico de absorción se desplazó ligeramente a $346{,}0$~nm, registrándose además una elevación severa en la línea de base en toda la región del visible ($A \approx 2{,}0$~u.a.). Esta elevación no corresponde a fotoluminiscencia, sino a la intensa dispersión de luz (\textit{scattering}) generada por la formación masiva de agregados de hollín debido al exceso de tiempo de reacción.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{secciones/imagenes/espectro_uv_vis_vinagre.png}
+    \caption{Espectros de absorción UV-Vis en solución para la ruta de catálisis ácida (ácido cítrico, urea y vinagre) a 2:30 y 3:00~minutos de pirólisis. Se evidencia el pico resuelto a $342$~nm ($2{,}20$~u.a.) en la muestra de 2:30~min y la elevada dispersión de luz (\textit{scattering}, $A \approx 2{,}0$~u.a.) en 3:00~min.}
+    \label{fig:uv_vis_vinagre}
+\end{figure}
+
+Por su parte, la cuantificación elemental por EDX para la muestra de vinagre a 3:00~minutos (Tabla~\ref{tab:edx_vinagre}) registró una concentración de nitrógeno del $31{,}87\%$ atómico, junto a $37{,}93\%$ de carbono y $30{,}19\%$ de oxígeno. Este elevado contenido de nitrógeno confirma que la combinación de urea con medio ácido promueve una alta densidad de grupos funcionales amina en la superficie de los puntos cuánticos.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{secciones/imagenes/espectro_edx_vinagre.png}
+    \caption{Espectro EDX de rayos X característicos para la muestra de Ácido Cítrico, Urea y Vinagre, evidenciando la alta densidad de nitrógeno ($N\,K\alpha = 0{,}392$~keV).}
+    \label{fig:edx_vinagre_individual}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Composición elemental por EDX (porcentaje atómico \% at.) para la muestra sintetizada en medio ácido (vinagre y urea a 3:00~min).}
+\label{tab:edx_vinagre}
+\small
+\begin{tabular}{l c c c}
+\hline
+\textbf{Elemento} & \textbf{Símbolo} & \textbf{\% Atómico (\% at.)} & \textbf{Función en la estructura} \\
+\hline
+Carbono   & $C$ & 37,93\% & Núcleo carbonoso $sp^2$ \\
+Nitrógeno & $N$ & 31,87\% & Grupos amina/amida funcionales periféricos \\
+Oxígeno   & $O$ & 30,19\% & Grupos carboxilo e hidroxilo \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.88\linewidth]{secciones/imagenes/comparativa_edx_barras.png}
+    \caption{Comparación elemental cuantitativa por espectroscopía EDX (porcentaje atómico \% at.) entre las diferentes rutas sintéticas del proyecto.}
+    \label{fig:comparativa_edx_barras}
+\end{figure}
+
+%--------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------
 
 %--------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------
@@ -139,7 +202,7 @@ entre ambas rutas de síntesis.
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=0.85\linewidth]{secciones/imagenes/fotometria_viales_manual.png}
+    \includegraphics[width=0.4\linewidth]{secciones/imagenes/fotometria_viales_manual.png}
     \caption{Fotografía de los 11 viales bajo excitación UV
     ($\lambda = 365$~nm) en cámara oscura. Los recuadros verdes indican
     las regiones de interés (ROI) de $22 \times 44$~px seleccionadas
@@ -169,14 +232,14 @@ y $G/B$ la relación verde-azul.}
 V1  & Blanco (H$_2$O)           & 10,6 & 26,2 & 210,4 & 42,57 &   0,00 & 0,125 \\
 V2  & AC+Clara huevo 1:00 min            & 11,3 & 33,6 & 213,2 & 47,38 &  +4,81 & 0,157 \\
 \textbf{V3}  & \textbf{AC+Clara huevo 1:15 min}    & \textbf{12,3} & \textbf{37,3} & \textbf{215,1} & \textbf{50,11} & \textbf{+7,54} & \textbf{0,174} \\
-V4  & Clara huevo 1:30 min            & 10,0 & 28,4 & 207,7 & 43,34 &  +0,77 & 0,137 \\
-V5  & Clara huevo 1:45 min            &  9,4 & 32,9 & 209,1 & 45,96 &  +3,39 & 0,157 \\
-V6  & Clara huevo 2:00 min            & 11,8 & 44,8 & 230,4 & 56,08 & +13,51 & 0,194 \\
-V7  & Clara huevo 2:30 min            & 12,3 & 43,0 & 230,7 & 55,21 & +12,64 & 0,186 \\
-V8  & Clara huevo 3:00 min            &  9,7 & 36,4 & 212,4 & 48,49 &  +5,92 & 0,171 \\
-V9  & AC + Urea + Vinagre 2:30  &  8,6 & 26,2 &  69,6 & 25,87 & $-$16,70 & 0,376 \\
-V10 & AC + Urea + Vinagre 3:00  & 14,1 & 32,9 &  61,7 & 30,56 & $-$12,01 & 0,534 \\
-V11 & AC + Urea Inicial 2:30    & 20,6 & 59,7 & 133,1 & 56,39 & +13,82 & 0,448 \\
+V4  & AC+Clara huevo 1:30 min            & 10,0 & 28,4 & 207,7 & 43,34 &  +0,77 & 0,137 \\
+V5  & AC+Clara huevo 1:45 min            &  9,4 & 32,9 & 209,1 & 45,96 &  +3,39 & 0,157 \\
+V6  & AC+Clara huevo 2:00 min            & 11,8 & 44,8 & 230,4 & 56,08 & +13,51 & 0,194 \\
+V7  & AC+Clara huevo 2:30 min            & 12,3 & 43,0 & 230,7 & 55,21 & +12,64 & 0,186 \\
+V8  & AC+Clara huevo 3:00 min            &  9,7 & 36,4 & 212,4 & 48,49 &  +5,92 & 0,171 \\
+V9  & AC + Urea + Vinagre 2:30 min  &  8,6 & 26,2 &  69,6 & 25,87 & $-$16,70 & 0,376 \\
+V10 & AC + Urea + Vinagre 3:00 min  & 14,1 & 32,9 &  61,7 & 30,56 & $-$12,01 & 0,534 \\
+V11 & AC + Urea Inicial 2:30 min    & 20,6 & 59,7 & 133,1 & 56,39 & +13,82 & 0,448 \\
 \hline
 \end{tabular}
 \end{table}
