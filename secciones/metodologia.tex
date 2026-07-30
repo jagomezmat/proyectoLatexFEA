@@ -11,8 +11,46 @@ Para la síntesis de la ruta verde sostenible se utilizó clara de huevo fresca 
 Posteriormente, se tomaron alícuotas iguales de la solución madre y se sometieron a pirólisis por microondas a una potencia efectiva de 770~W, deteniendo la reacción a siete tiempos distintos: 1:00, 1:15, 1:30, 1:45, 2:00, 2:30 y 3:00~minutos. Tras la pirólisis, las alícuotas obtenidas se redisolvieron en agua desionizada y se purificaron por filtración mediante membrana de $0{,}22~\mu$m antes de la caracterización por espectroscopía UV-Vis.
 
 \subsection{Síntesis de la ruta ácida (Ácido cítrico, urea y vinagre)}
-Para la síntesis en medio ácido se disolvieron $1{,}3910$~g de ácido cítrico anhidro y $2{,}6090$~g de urea en 20~mL de vinagre comercial (ácido acético), manteniendo la relación molar 1:6. La mezcla se homogenizó bajo agitación magnética a 350~rpm durante 15 minutos. 
-Posteriormente, la solución se sometió a pirólisis por microondas a una potencia efectiva de 770~W, extrayendo muestras a dos tiempos de reacción: 2:30 y 3:00~minutos. Los productos obtenidos se redisolvieron en agua desionizada y se purificaron mediante filtración por membrana de $0{,}22~\mu$m previo a la caracterización espectroscópica por UV-Vis.
+Para la síntesis en medio ácido se disolvieron $0{,}9664$~g de ácido cítrico anhidro y $3{,}03036$~g de urea en 20~mL de vinagre comercial (ácido acético), manteniendo la relación molar 1:10. La mezcla se homogenizó bajo agitación magnética a 400~rpm durante 15 minutos.
+Posteriormente, la solución se sometió a pirólisis por microondas a una potencia efectiva de 770~W, extrayendo muestras a dos tiempos de reacción: 2:30 y 3:00~minutos. Los productos obtenidos se redisolvieron en agua desionizada se colocaraon en un baño de ultrasonido, proceso de centrifugado y se purificaron mediante filtración por membrana de $0{,}22~\mu$m previo a la caracterización espectroscópica por UV-Vis.
+
+\subsection{Difracción de Rayos X}
+La difracción ocurre cuando una radiación de longitud de onda comparable con las distancias atómicas interactúa con planos de dispersión. Para interferencia constructiva se cumple la ley de Bragg:
+\begin{equation}
+	n\lambda = 2d\sin\theta ,
+	\label{eq:bragg}
+\end{equation}
+donde \(n\) es el orden de reflexión, \(\lambda\) la longitud de onda, \(d\) la separación interplanar y \(\theta\) la mitad del ángulo medido \(2\theta\). En este informe se asumió radiación Cu K\(\alpha\), \(\lambda=0{,}15406\ \mathrm{nm}\), por ser la configuración más común en difractómetros Bruker de laboratorio. Esta suposición debe verificarse con el archivo de parámetros instrumentales del equipo.
+\subsubsection{Carbono amorfo y turbostrático}
+En grafito ideal, la reflexión (002) aparece cerca de \(26^\circ\) en \(2\theta\) para Cu K\(\alpha\) y corresponde al apilamiento de láminas. En CQDs, los defectos, grupos funcionales y curvatura de las capas aumentan el desorden y pueden desplazar o ensanchar esta señal. Un máximo ancho entre aproximadamente \(20^\circ\) y \(30^\circ\) suele interpretarse como orden grafítico de corto alcance. Una contribución más débil entre \(40^\circ\) y \(45^\circ\) puede asociarse con correlaciones laterales tipo (100)/(101), aunque en materiales altamente amorfos no es correcto asignar índices cristalográficos rígidos sin evidencia adicional.
+\subsubsection{Ecuación de Scherrer}
+La ecuación de Scherrer
+\begin{equation}
+	D=\frac{K\lambda}{\beta\cos\theta}
+	\label{eq:scherrer}
+\end{equation}
+relaciona el ancho de un pico con el tamaño del dominio coherente. \(K\) es un factor de forma, \(\beta\) es el FWHM en radianes y \(D\) no representa necesariamente el diámetro físico observado por TEM. La estimación es válida cuando el ensanchamiento está dominado por tamaño cristalino y se ha corregido el ancho instrumental. En halos amorfos y señales solapadas, su uso es únicamente orientativo.
+\subsubsection{Síntesis de la muestra}
+\begin{table}[H]
+	\centering
+	\caption{Condiciones empleadas en la síntesis de la muestra.}
+	\label{tab:sintesis}
+	\begin{tabular}{l l}
+		\hline
+		\textbf{Parámetro} & \textbf{Condición} \\
+		\hline
+		Precursor carbonoso & Ácido cítrico \\
+		Fuente de nitrógeno/biomoléculas & Clara de huevo \\
+		Potencia de microondas & \(770\ \mathrm{W}\) \\
+		Tiempo de irradiación & \(2\ \mathrm{min}\ 30\ \mathrm{s}\) \\
+		\hline
+	\end{tabular}
+\end{table}
+\subsubsection{Adquisición y preparación de datos}
+Se utilizaron los archivos \texttt{JAGA-01.brml} y \texttt{JAGA-01.raw}. Del contenedor BRML se extrajo la serie de intensidad frente a \(2\theta\) y se generó el archivo \texttt{JAGA-01.xy}. El conjunto contiene 2183 puntos, desde \(10{,}0000^\circ\) hasta \(74{,}9969^\circ\), con incremento medio de \(0{,}0298^\circ\).
+\subsubsection{Tratamiento matemático}
+El patrón se ajustó por mínimos cuadrados no lineales mediante un fondo cuadrático y tres funciones Pseudo-Voigt. La función Pseudo-Voigt combina contribuciones gaussiana y lorentziana y es útil para describir perfiles ensanchados. No se impuso una identificación de fase cristalina; el ajuste se utilizó para separar contribuciones superpuestas y obtener posiciones y FWHM reproducibles. La calidad global fue \(R^2=0{,}9933\) y \(\mathrm{RMSE}=25{,}7\) cuentas.
+
 
 \subsection{Fotometría digital RGB en cámara oscura}
 
