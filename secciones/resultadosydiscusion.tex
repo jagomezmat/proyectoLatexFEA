@@ -131,7 +131,7 @@ Azufre   & $S$ &  0,46\% & Heteroátomo dopante (aminoácidos cisteína/metionin
 \hline
 \end{tabular}
 \end{table}
-La incorporación de azufre $(0,46 \% at.)$, procedente de los aminoácidos sulfurados de la albúmina, introduce estados de defecto electrónicos y niveles de trampa adicionales en la brecha de banda que mejoran la eficiencia de fotoluminiscencia y modifican los bordes de absorción, de acuerdo con los hallazgos de Kolanowska et al. \cite{kolanowska2022carbon} para CQDs derivados de aminoácidos.
+Por su parte, la cuantificación por EDX (Tabla 3) confirmó la incorporación de azufre en el material. Además de la matriz de carbono (66,78\%~at.) y oxígeno (32,76\%~at.), se detectó una concentración de 0,46\%~atómico de azufre ($S$), confirmando la integración de heteroátomos provenientes de los aminoácidos sulfurados de la ovoalbúmina. La señal de nitrógeno no pudo resolverse cuantitativamente mediante EDX en esta muestra, dada la baja energía de su línea $K\alpha$ (0,392~keV) y su proximidad espectral con las líneas $C\,K\alpha$ (0,277~keV) y $O\,K\alpha$ (0,525~keV), limitación conocida de esta técnica para elementos ligeros; su presencia se infiere de forma indirecta a partir de la composición elemental típica de proteínas como la ovoalbúmina (aprox.\ 15--16\%~N en masa). La incorporación de azufre $(0,46 \% at.)$, procedente de los aminoácidos sulfurados de la albúmina, introduce estados de defecto electrónicos y niveles de trampa adicionales en la brecha de banda que mejoran la eficiencia de fotoluminiscencia y modifican los bordes de absorción, de acuerdo con los hallazgos de Kolanowska et al. \cite{kolanowska2022carbon} para CQDs derivados de aminoácidos.
 
 %--------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------
@@ -151,6 +151,7 @@ Para la muestra de 3:00~minutos, el pico de absorción se desplazó ligeramente 
     \caption{Espectros de absorción UV-Vis en solución para la ruta de catálisis ácida (ácido cítrico, urea y vinagre) a 2:30 y 3:00~minutos de pirólisis. Se evidencia el pico resuelto a $342$~nm ($2{,}20$~u.a.) en la muestra de 2:30~min y la elevada dispersión de luz (\textit{scattering}, $A \approx 2{,}0$~u.a.) en 3:00~min.}
     \label{fig:uv_vis_vinagre}
 \end{figure}
+
 
 Por su parte, la cuantificación elemental por EDX para la muestra de vinagre a 3:00~minutos (Tabla~\ref{tab:edx_vinagre}) registró una concentración de nitrógeno del $31{,}87\%$ atómico, junto a $37{,}93\%$ de carbono y $30{,}19\%$ de oxígeno. Este elevado contenido de nitrógeno confirma que la combinación de urea con medio ácido promueve una alta densidad de grupos funcionales amina en la superficie de los puntos cuánticos.
 
@@ -186,6 +187,63 @@ Oxígeno   & $O$ & 30,19\% & Grupos carboxilo e hidroxilo \\
 
 %--------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------
+
+%--------------------------------------------------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------------
+\subsection{Difracción de Rayos X (DRX)}
+La Figura~\ref{fig:experimental} muestra el patrón experimental. La intensidad aumenta progresivamente desde ángulos bajos, alcanza una envolvente máxima alrededor de \(28^\circ\) y disminuye hacia \(75^\circ\). No aparecen picos agudos de alta intensidad, lo que descarta una fase cristalina mayoritaria bien ordenada dentro del límite de detección del ensayo.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.85\textwidth]{secciones/imagenes/image1.png}
+	\caption{Difractograma experimental de la muestra JAGA-01.}
+	\label{fig:experimental}
+\end{figure}
+La Figura~\ref{fig:ajuste} presenta el ajuste global. El modelo reproduce adecuadamente la forma de la envolvente y permite distinguir una contribución principal cercana a \(27{,}9^\circ\), una contribución de alto ángulo alrededor de \(40{,}8^\circ\) y una componente menor cerca de \(19{,}2^\circ\). La componente de baja angulación debe considerarse con cautela porque puede representar una transición del fondo, material orgánico residual o una contribución real débil.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{secciones/imagenes/image2.png}
+	\caption{Ajuste Pseudo-Voigt y fondo modelado.}
+	\label{fig:ajuste}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{secciones/imagenes/image3.png}
+	\caption{Componentes matemáticas obtenidas después de descontar el fondo.}
+	\label{fig:componentes}
+\end{figure}
+\subsubsection{Parámetros obtenidos}
+\begin{table}[H]
+	\centering
+	\caption{Parámetros derivados del ajuste Pseudo-Voigt.}
+	\label{tab:parametros}
+	\small
+	\begin{tabular}{l c c c c}
+		\hline
+		\textbf{Componente} & \(\boldsymbol{2\theta}\) \textbf{(\(^\circ\))} & \textbf{FWHM (\(^\circ\))} & \(\boldsymbol{d}\) \textbf{(nm)} & \(\boldsymbol{D}\) \textbf{aparente (nm)} \\
+		\hline
+		Baja angulación & 19,20 & 3,24 & 0,462 & 2,49 \\
+		Halo principal  & 27,89 & 12,88 & 0,320 & 0,64 \\
+		Alto ángulo     & 40,75 & 14,39 & 0,221 & 0,59 \\
+		\hline
+	\end{tabular}
+\end{table}
+\noindent\textit{Nota:} \(D\) se calculó con \(K=0{,}9\) y \(\lambda=0{,}15406\ \mathrm{nm}\), sin corrección instrumental. Para las dos bandas más anchas debe reportarse como tamaño de dominio coherente aparente, no como tamaño de partícula.
+\subsubsection{Ejemplo de cálculo para el halo principal}
+Para \(2\theta=27{,}89^\circ\), se tiene \(\theta=13{,}94^\circ\). Aplicando la ecuación de Bragg con \(n=1\):
+\begin{equation}
+	d=\frac{\lambda}{2\sin\theta}=0{,}320\ \mathrm{nm}.
+\end{equation}
+El FWHM es \(12{,}88^\circ=0{,}2248\ \mathrm{rad}\). Con \(K=0{,}9\), la ecuación de Scherrer \cite{patterson1939scherrer,muniz2016scherrer} resulta:
+\begin{equation}
+	D=\frac{K\lambda}{\beta\cos\theta}=0{,}64\ \mathrm{nm}.
+\end{equation}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{secciones/imagenes/image4.png}
+	\caption{Distribución de residuos del ajuste.}
+	\label{fig:residuos}
+\end{figure}
+
 
 %--------------------------------------------------------------------------------------------------------
 %--------------------------------------------------------------------------------------------------------
